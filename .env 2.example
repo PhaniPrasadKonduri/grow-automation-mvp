@@ -1,6 +1,0 @@
-# Local development configuration examples only
-# Copy to .env if needed for local tooling, but never commit real secrets.
-
-CAP_ENV=development
-UI5_ENV=development
-APP_NAMESPACE=com.ey.grow.prototype
