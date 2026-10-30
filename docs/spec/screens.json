@@ -1,0 +1,1062 @@
+[
+  {
+    "id": "P00",
+    "title": "Demo entry and role context",
+    "route": "/demo",
+    "roles": "All personas",
+    "pattern": "Guided entry",
+    "purpose": "A labeled demonstration entry establishes persona, project and scenario without pretending to authenticate to SAP.",
+    "actions": [
+      {
+        "id": "P00-A01",
+        "label": "Choose persona",
+        "input": "Select a seeded user",
+        "outcome": "Load that user’s permitted navigation and project scope"
+      },
+      {
+        "id": "P00-A02",
+        "label": "Choose scenario",
+        "input": "Select happy path or an exception",
+        "outcome": "Load a separate fixture version and explain starting state"
+      },
+      {
+        "id": "P00-A03",
+        "label": "Start guided tour",
+        "input": "Confirm demo context",
+        "outcome": "Open P01 and show the first story prompt"
+      },
+      {
+        "id": "P00-A04",
+        "label": "Reset scenario",
+        "input": "Confirm destructive demo reset",
+        "outcome": "Clear only the selected demo workspace and restore its seed"
+      }
+    ]
+  },
+  {
+    "id": "P01",
+    "title": "Executive value cockpit",
+    "route": "/home",
+    "roles": "Sponsor and Delivery Lead",
+    "pattern": "Overview with actionable cards",
+    "purpose": "Show the transformation story, unresolved decisions and verified progress before exposing operational detail.",
+    "actions": [
+      {
+        "id": "P01-A01",
+        "label": "Readiness KPI",
+        "input": "Select phase or country",
+        "outcome": "Open P02 with the same filter; reveal numerator and denominator"
+      },
+      {
+        "id": "P01-A02",
+        "label": "Value indicator",
+        "input": "Choose a benefit",
+        "outcome": "Open P25 and show its assumptions and evidence"
+      },
+      {
+        "id": "P01-A03",
+        "label": "Approval count",
+        "input": "Select pending work",
+        "outcome": "Open P16 filtered to visible approvals"
+      },
+      {
+        "id": "P01-A04",
+        "label": "Continue journey",
+        "input": "Use current phase and role",
+        "outcome": "Route to the next eligible task; show blockers when none is ready"
+      }
+    ]
+  },
+  {
+    "id": "P02",
+    "title": "Project and seven phase workspace",
+    "route": "/projects/:id",
+    "roles": "Delivery Lead and permitted project members",
+    "pattern": "Object Page with phase navigation",
+    "purpose": "Keep all seven phases reachable while distinguishing completed work, current work and simulated later-stage evidence.",
+    "actions": [
+      {
+        "id": "P02-A01",
+        "label": "Select phase",
+        "input": "Click any phase",
+        "outcome": "Open its worklist or gate overview without granting execution authority"
+      },
+      {
+        "id": "P02-A02",
+        "label": "Gate details",
+        "input": "Select a gate",
+        "outcome": "Show required evidence, missing items, owner and linked tasks"
+      },
+      {
+        "id": "P02-A03",
+        "label": "Change project",
+        "input": "Select authorized project",
+        "outcome": "Reload context and clear selections belonging to the prior project"
+      },
+      {
+        "id": "P02-A04",
+        "label": "Phase completion",
+        "input": "Request readiness review",
+        "outcome": "Open approval preparation or list blockers; never bypass dependencies"
+      }
+    ]
+  },
+  {
+    "id": "P03",
+    "title": "Discover and transformation context",
+    "route": "/projects/:id/discover",
+    "roles": "Sponsor Business Owner and Enterprise Architect",
+    "pattern": "Object Page",
+    "purpose": "Connect industry goals and business processes to proposed scope and applications.",
+    "actions": [
+      {
+        "id": "P03-A01",
+        "label": "Business outcome",
+        "input": "Select an outcome",
+        "outcome": "Open measurable benefit and linked process set"
+      },
+      {
+        "id": "P03-A02",
+        "label": "Process landscape",
+        "input": "Select manufacturing domain",
+        "outcome": "Open P08 filtered to that domain"
+      },
+      {
+        "id": "P03-A03",
+        "label": "Architecture context",
+        "input": "Select application relation",
+        "outcome": "Open P27 with LeanIX references and lifecycle context"
+      },
+      {
+        "id": "P03-A04",
+        "label": "Confirm discovery brief",
+        "input": "Edit assumptions and save",
+        "outcome": "Version the brief and show required decision owners"
+      }
+    ]
+  },
+  {
+    "id": "P04",
+    "title": "Prepare and project setup",
+    "route": "/projects/:id/prepare",
+    "roles": "Delivery Lead and Administrator",
+    "pattern": "Wizard and Object Page",
+    "purpose": "Establish ownership, legal entity inputs, countries, source baseline and target before proposing executable work.",
+    "actions": [
+      {
+        "id": "P04-A01",
+        "label": "Edit project",
+        "input": "Change permitted field",
+        "outcome": "Validate mandatory values and save a draft version"
+      },
+      {
+        "id": "P04-A02",
+        "label": "Legal entities",
+        "input": "Add or edit seeded entity",
+        "outcome": "Open P12 with uniqueness and country validation"
+      },
+      {
+        "id": "P04-A03",
+        "label": "Assign owners",
+        "input": "Choose eligible persona",
+        "outcome": "Update responsibility and notify the assignee"
+      },
+      {
+        "id": "P04-A04",
+        "label": "Readiness check",
+        "input": "Request validation",
+        "outcome": "Show missing setup and route to P05 or P06 for resolution"
+      }
+    ]
+  },
+  {
+    "id": "P05",
+    "title": "Integration control center",
+    "route": "/projects/:id/integrations",
+    "roles": "Administrator and Integration Operator",
+    "pattern": "List Report and Object Page",
+    "purpose": "Make the five SAP integration touchpoints tangible with correlation, capability and last-observed status.",
+    "actions": [
+      {
+        "id": "P05-A01",
+        "label": "Test connection",
+        "input": "Select a named system fixture",
+        "outcome": "Show separate connectivity, authentication and permitted-operation results"
+      },
+      {
+        "id": "P05-A02",
+        "label": "View contract",
+        "input": "Select an operation",
+        "outcome": "Show API/upload/UI/attended classification and approved payload preview"
+      },
+      {
+        "id": "P05-A03",
+        "label": "Refresh snapshot",
+        "input": "Request read-only refresh",
+        "outcome": "Advance observed timestamp or show seeded stale/offline failure"
+      },
+      {
+        "id": "P05-A04",
+        "label": "Inspect failed exchange",
+        "input": "Select a correlation ID",
+        "outcome": "Open P21 with sanitized request, response and accountable recovery"
+      },
+      {
+        "id": "P05-A05",
+        "label": "Open SAP reference",
+        "input": "Choose linked record",
+        "outcome": "Open an in-app simulated target preview with external system identity and return route"
+      }
+    ]
+  },
+  {
+    "id": "P06",
+    "title": "TO BE document intake",
+    "route": "/projects/:id/documents",
+    "roles": "Business Analyst and Functional Consultant",
+    "pattern": "Upload collection and Wizard",
+    "purpose": "Turn the existing BPD into versioned atomic requirements with visible extraction and source safety results.",
+    "actions": [
+      {
+        "id": "P06-A01",
+        "label": "Upload document",
+        "input": "Choose a safe local DOCX or provided fixture",
+        "outcome": "Validate type and size; display extraction progress and resulting revision"
+      },
+      {
+        "id": "P06-A02",
+        "label": "Use BPD fixture",
+        "input": "Select existing demonstration baseline",
+        "outcome": "Create the same downstream records as upload; preserve BR and TC IDs"
+      },
+      {
+        "id": "P06-A03",
+        "label": "Inspect source",
+        "input": "Select a paragraph reference",
+        "outcome": "Open document preview at the cited passage"
+      },
+      {
+        "id": "P06-A04",
+        "label": "Resolve upload issue",
+        "input": "Select duplicate or failed document",
+        "outcome": "Offer new revision, remove draft or retry safe extraction"
+      },
+      {
+        "id": "P06-A05",
+        "label": "Review requirements",
+        "input": "Extraction completes",
+        "outcome": "Open P07 with unresolved and low-evidence items first"
+      }
+    ]
+  },
+  {
+    "id": "P07",
+    "title": "Requirement and fit workbench",
+    "route": "/projects/:id/requirements",
+    "roles": "Business Analyst and Functional Consultant",
+    "pattern": "List Report with Flexible Column Layout",
+    "purpose": "Keep the business requirement, proposed process fit, source and acceptance criterion together.",
+    "actions": [
+      {
+        "id": "P07-A01",
+        "label": "Filter or search",
+        "input": "Enter text or choose domain/country",
+        "outcome": "Update rows and counts; provide reset and meaningful no-results state"
+      },
+      {
+        "id": "P07-A02",
+        "label": "Edit requirement",
+        "input": "Change atomic text or classification",
+        "outcome": "Create a new version and mark dependent proposals stale"
+      },
+      {
+        "id": "P07-A03",
+        "label": "Inspect trace",
+        "input": "Select BR ID",
+        "outcome": "Show source, scope, organization, configuration, TC and evidence links"
+      },
+      {
+        "id": "P07-A04",
+        "label": "Request scope proposal",
+        "input": "Select eligible requirements",
+        "outcome": "Create an agent run in P15 and route completed output to P09"
+      },
+      {
+        "id": "P07-A05",
+        "label": "Resolve assumption",
+        "input": "Enter approved evidence",
+        "outcome": "Validate source and update the unresolved decision register"
+      }
+    ]
+  },
+  {
+    "id": "P08",
+    "title": "Process and architecture explorer",
+    "route": "/projects/:id/processes",
+    "roles": "Functional Consultant and Enterprise Architect",
+    "pattern": "Tree and detail view",
+    "purpose": "Browse the 202-process catalog and make Signavio process context discoverable without presenting it as automated business-process coverage.",
+    "actions": [
+      {
+        "id": "P08-A01",
+        "label": "Select domain or process",
+        "input": "Choose catalog node",
+        "outcome": "Open process detail with BR/TC and scope candidates"
+      },
+      {
+        "id": "P08-A02",
+        "label": "View process flow",
+        "input": "Select Signavio reference",
+        "outcome": "Show a labeled illustrative flow and provenance; real licensed link is a separate action"
+      },
+      {
+        "id": "P08-A03",
+        "label": "Inspect application relation",
+        "input": "Choose supporting system",
+        "outcome": "Open P27 with the same process context"
+      },
+      {
+        "id": "P08-A04",
+        "label": "Add to review",
+        "input": "Select process",
+        "outcome": "Add requirements to the scope review basket and show updated count"
+      }
+    ]
+  },
+  {
+    "id": "P09",
+    "title": "Scoping agent review",
+    "route": "/projects/:id/scope",
+    "roles": "Functional Consultant and Scope Approver",
+    "pattern": "List Report",
+    "purpose": "Review grounded scope candidates, exclusions, prerequisites and applicability before baselining.",
+    "actions": [
+      {
+        "id": "P09-A01",
+        "label": "Generate proposal",
+        "input": "Choose requirement set and catalog version",
+        "outcome": "Create visible planned/running/completed agent states in P15"
+      },
+      {
+        "id": "P09-A02",
+        "label": "Select candidate",
+        "input": "Open SAP identifier row",
+        "outcome": "Navigate to P10 with evidence and prerequisites"
+      },
+      {
+        "id": "P09-A03",
+        "label": "Accept or exclude",
+        "input": "Enter inclusion decision and reason",
+        "outcome": "Persist reviewer choice; update dependency and coverage counts"
+      },
+      {
+        "id": "P09-A04",
+        "label": "Compare versions",
+        "input": "Select two revisions",
+        "outcome": "Show added/removed items and downstream impact"
+      },
+      {
+        "id": "P09-A05",
+        "label": "Submit scope baseline",
+        "input": "Confirm reviewed candidates",
+        "outcome": "Create scope approval in P16 or show unresolved blockers"
+      }
+    ]
+  },
+  {
+    "id": "P10",
+    "title": "Scope candidate detail",
+    "route": "/projects/:id/scope/:scopeId",
+    "roles": "Functional Consultant and Scope Approver",
+    "pattern": "Object Page",
+    "purpose": "Explain why a scope item fits and where SAP availability or evidence still needs validation.",
+    "actions": [
+      {
+        "id": "P10-A01",
+        "label": "Inspect SAP identity",
+        "input": "Choose verified catalog reference",
+        "outcome": "Display exact ID/title pair, release and verification state"
+      },
+      {
+        "id": "P10-A02",
+        "label": "Explain recommendation",
+        "input": "Open assistant prompt",
+        "outcome": "Answer using cited requirements and catalog excerpts"
+      },
+      {
+        "id": "P10-A03",
+        "label": "Resolve prerequisite",
+        "input": "Select a prerequisite",
+        "outcome": "Open the dependent scope object and preserve return context"
+      },
+      {
+        "id": "P10-A04",
+        "label": "Apply reviewer decision",
+        "input": "Enter rationale",
+        "outcome": "Save candidate decision and invalidate impacted approvals"
+      },
+      {
+        "id": "P10-A05",
+        "label": "Prepare activation package",
+        "input": "Use approved baseline",
+        "outcome": "Open P18 dry-run package or route to remaining approvals"
+      }
+    ]
+  },
+  {
+    "id": "P11",
+    "title": "Organization structure designer",
+    "route": "/projects/:id/organization",
+    "roles": "Functional Consultant and Organization Approver",
+    "pattern": "Freestyle UI5 tree with detail panel",
+    "purpose": "Design 10 entities across five illustrative countries with accessible editing and explicit assignments.",
+    "actions": [
+      {
+        "id": "P11-A01",
+        "label": "Select node",
+        "input": "Choose company plant or organizational unit",
+        "outcome": "Open P12 with required attributes and assignments"
+      },
+      {
+        "id": "P11-A02",
+        "label": "Add node or assignment",
+        "input": "Choose allowed object type",
+        "outcome": "Open typed form; reject duplicate codes and invalid parents"
+      },
+      {
+        "id": "P11-A03",
+        "label": "Generate design",
+        "input": "Use approved scope version",
+        "outcome": "Run organization agent and show proposed graph differences"
+      },
+      {
+        "id": "P11-A04",
+        "label": "Validate structure",
+        "input": "Run deterministic rules",
+        "outcome": "List missing attributes and assignment errors with focus links"
+      },
+      {
+        "id": "P11-A05",
+        "label": "Submit structure",
+        "input": "Resolve mandatory issues",
+        "outcome": "Create organization approval and downstream impact summary"
+      }
+    ]
+  },
+  {
+    "id": "P12",
+    "title": "Organization object detail",
+    "route": "/projects/:id/organization/:nodeId",
+    "roles": "Functional Consultant and Organization Approver",
+    "pattern": "Object Page",
+    "purpose": "Make legal attributes, identifiers and assignments editable through standard forms rather than graph-only interactions.",
+    "actions": [
+      {
+        "id": "P12-A01",
+        "label": "Edit attributes",
+        "input": "Change approved fields",
+        "outcome": "Validate code/country/currency and save new graph revision"
+      },
+      {
+        "id": "P12-A02",
+        "label": "Manage assignments",
+        "input": "Select allowed parent or related object",
+        "outcome": "Validate cardinality and update tree and detail together"
+      },
+      {
+        "id": "P12-A03",
+        "label": "Compare observed target",
+        "input": "Open snapshot",
+        "outcome": "Show designed versus observed structure with timestamp"
+      },
+      {
+        "id": "P12-A04",
+        "label": "Inspect impact",
+        "input": "Choose a changed field",
+        "outcome": "List affected configuration proposals and approvals"
+      },
+      {
+        "id": "P12-A05",
+        "label": "Return to designer",
+        "input": "Use breadcrumb",
+        "outcome": "Restore selected node and prior filter"
+      }
+    ]
+  },
+  {
+    "id": "P13",
+    "title": "Configuration activity worklist",
+    "route": "/projects/:id/configuration",
+    "roles": "Configuration Consultant and Finance Approver",
+    "pattern": "List Report",
+    "purpose": "Resolve requirements to configuration activities and distinguish an activity identifier from its executable integration pathway.",
+    "actions": [
+      {
+        "id": "P13-A01",
+        "label": "Generate values",
+        "input": "Select pilot activity set",
+        "outcome": "Run configuration agent with grounded requirements and verified structure"
+      },
+      {
+        "id": "P13-A02",
+        "label": "Open activity",
+        "input": "Choose activity row",
+        "outcome": "Open P14 with typed fields, current values and suggested values"
+      },
+      {
+        "id": "P13-A03",
+        "label": "Filter pathway",
+        "input": "Choose API upload UI or attended",
+        "outcome": "Update supported-operation rows and counts"
+      },
+      {
+        "id": "P13-A04",
+        "label": "Validate set",
+        "input": "Run field and dependency checks",
+        "outcome": "Show errors and unresolved local requirements"
+      },
+      {
+        "id": "P13-A05",
+        "label": "Submit change set",
+        "input": "Select validated revisions",
+        "outcome": "Create approval for the exact target, values and package hash"
+      }
+    ]
+  },
+  {
+    "id": "P14",
+    "title": "Configuration proposal and value diff",
+    "route": "/projects/:id/configuration/:activityId",
+    "roles": "Configuration Consultant and Finance Approver",
+    "pattern": "Object Page with editable table",
+    "purpose": "Let reviewers compare observed, proposed and approved values and understand the source for each value.",
+    "actions": [
+      {
+        "id": "P14-A01",
+        "label": "Edit proposed value",
+        "input": "Enter typed value",
+        "outcome": "Validate allowed values and cross-field rules; retain human edit attribution"
+      },
+      {
+        "id": "P14-A02",
+        "label": "View evidence",
+        "input": "Select field citation",
+        "outcome": "Open BR/source passage and organization dependency"
+      },
+      {
+        "id": "P14-A03",
+        "label": "Explain risk",
+        "input": "Select risk status",
+        "outcome": "Show finance-sensitive or irreversible conditions and required owner"
+      },
+      {
+        "id": "P14-A04",
+        "label": "Refresh observed values",
+        "input": "Request snapshot",
+        "outcome": "Update diff and invalidate approval when target state changed"
+      },
+      {
+        "id": "P14-A05",
+        "label": "Submit or revise",
+        "input": "Save validated version",
+        "outcome": "Route to P16 or return a field-linked blocker list"
+      }
+    ]
+  },
+  {
+    "id": "P15",
+    "title": "Agent mission control",
+    "route": "/projects/:id/agents/:runId",
+    "roles": "Consultant and Delivery Lead",
+    "pattern": "Object Page with Timeline",
+    "purpose": "Show bounded agents planning, retrieving sources, validating, waiting for review and handing off accountable work.",
+    "actions": [
+      {
+        "id": "P15-A01",
+        "label": "Inspect plan",
+        "input": "Choose visible step",
+        "outcome": "Show intended tool, bounded input, expected output and prerequisite"
+      },
+      {
+        "id": "P15-A02",
+        "label": "View sources",
+        "input": "Select evidence reference",
+        "outcome": "Open source excerpt and freshness information"
+      },
+      {
+        "id": "P15-A03",
+        "label": "Pause or cancel",
+        "input": "Choose pending demo run",
+        "outcome": "Prevent undispatched steps and preserve completed evidence"
+      },
+      {
+        "id": "P15-A04",
+        "label": "Review outcome",
+        "input": "Choose proposal result",
+        "outcome": "Open P09 P11 or P13 with run linkage"
+      },
+      {
+        "id": "P15-A05",
+        "label": "Retry safe analysis",
+        "input": "Choose failed read-only step",
+        "outcome": "Create linked attempt; preserve prior failure and budget history"
+      }
+    ]
+  },
+  {
+    "id": "P16",
+    "title": "My approvals inbox",
+    "route": "/projects/:id/approvals",
+    "roles": "Scope Organization Finance and Release Approvers",
+    "pattern": "List Report",
+    "purpose": "Route exact business decisions to eligible approvers and make overdue, returned and stale work visible.",
+    "actions": [
+      {
+        "id": "P16-A01",
+        "label": "Filter assignments",
+        "input": "Choose type status or due date",
+        "outcome": "Show only permitted items with updated count"
+      },
+      {
+        "id": "P16-A02",
+        "label": "Open approval",
+        "input": "Choose row",
+        "outcome": "Open P17 with baseline, target, diff and eligibility"
+      },
+      {
+        "id": "P16-A03",
+        "label": "Inspect eligibility",
+        "input": "Select own submitted item",
+        "outcome": "Explain segregation of duties and identify eligible reviewer"
+      },
+      {
+        "id": "P16-A04",
+        "label": "Open returned work",
+        "input": "Choose returned item",
+        "outcome": "Route proposer to the affected proposal with reviewer comments"
+      }
+    ]
+  },
+  {
+    "id": "P17",
+    "title": "Approval decision and workflow",
+    "route": "/projects/:id/approvals/:approvalId",
+    "roles": "Assigned eligible Approver",
+    "pattern": "Object Page with approval Timeline",
+    "purpose": "Require informed approval of the exact version, target and policy before any simulated write.",
+    "actions": [
+      {
+        "id": "P17-A01",
+        "label": "Approve",
+        "input": "Confirm eligible identity and immutable package",
+        "outcome": "Record decision and unlock next gate only when all prerequisites pass"
+      },
+      {
+        "id": "P17-A02",
+        "label": "Return for changes",
+        "input": "Enter mandatory reason",
+        "outcome": "Create returned state and notify proposer"
+      },
+      {
+        "id": "P17-A03",
+        "label": "Reject",
+        "input": "Enter reason and confirm",
+        "outcome": "Record final rejection for this version; preserve lineage"
+      },
+      {
+        "id": "P17-A04",
+        "label": "Inspect workflow",
+        "input": "Choose step or decision",
+        "outcome": "Show assignment, timestamp, policy and next owner"
+      },
+      {
+        "id": "P17-A05",
+        "label": "Review stale approval",
+        "input": "Open changed proposal",
+        "outcome": "Show invalidation and route to a fresh approval request"
+      }
+    ]
+  },
+  {
+    "id": "P18",
+    "title": "Deployment package and dry run",
+    "route": "/projects/:id/packages/:packageId",
+    "roles": "Release Manager and Deployment Operator",
+    "pattern": "Object Page with ordered action table",
+    "purpose": "Separate preparation, release authorization and dispatch; respect scope and organization prerequisite deployment.",
+    "actions": [
+      {
+        "id": "P18-A01",
+        "label": "Build package",
+        "input": "Select approved baseline versions",
+        "outcome": "Generate ordered manifest with target and stable action keys"
+      },
+      {
+        "id": "P18-A02",
+        "label": "Dry run",
+        "input": "Run preflight",
+        "outcome": "Display validation results and eligible or attended pathways without changing target"
+      },
+      {
+        "id": "P18-A03",
+        "label": "Review blockers",
+        "input": "Select failed precondition",
+        "outcome": "Open exact missing approval, stale snapshot or organization issue"
+      },
+      {
+        "id": "P18-A04",
+        "label": "Request release authorization",
+        "input": "Submit immutable package",
+        "outcome": "Create release approval in P16"
+      },
+      {
+        "id": "P18-A05",
+        "label": "Execute simulation",
+        "input": "Use authorized current package",
+        "outcome": "Start P19 only after policy, approval and target checks pass"
+      }
+    ]
+  },
+  {
+    "id": "P19",
+    "title": "Deployment execution monitor",
+    "route": "/projects/:id/deployments/:runId",
+    "roles": "Deployment Operator and Release Manager",
+    "pattern": "Object Page with Timeline and responsive action list",
+    "purpose": "Make simulated external activity observable and recoverable rather than animating an unconditional success.",
+    "actions": [
+      {
+        "id": "P19-A01",
+        "label": "Inspect action",
+        "input": "Choose queued running or completed step",
+        "outcome": "Show request classification, correlation, attempts and observed state"
+      },
+      {
+        "id": "P19-A02",
+        "label": "Pause remaining actions",
+        "input": "Confirm pause",
+        "outcome": "Stop new dispatch while an in-flight action resolves"
+      },
+      {
+        "id": "P19-A03",
+        "label": "Reconcile unknown",
+        "input": "Select uncertain outcome",
+        "outcome": "Open P20 with target observation; do not blindly retry"
+      },
+      {
+        "id": "P19-A04",
+        "label": "Open attended step",
+        "input": "Choose human task",
+        "outcome": "Show typed instructions, owner and evidence upload"
+      },
+      {
+        "id": "P19-A05",
+        "label": "Open results",
+        "input": "Wait for verification",
+        "outcome": "Open P20 or P21; completion requires observed evidence"
+      }
+    ]
+  },
+  {
+    "id": "P20",
+    "title": "Readback and reconciliation",
+    "route": "/projects/:id/reconciliation/:packageId",
+    "roles": "Deployment Operator and Functional Consultant",
+    "pattern": "Comparison table and Object Page",
+    "purpose": "Distinguish approved intent, simulated target observations and verified completion.",
+    "actions": [
+      {
+        "id": "P20-A01",
+        "label": "Refresh observation",
+        "input": "Request read-only lookup",
+        "outcome": "Resolve seeded match mismatch or unknown with a new timestamp"
+      },
+      {
+        "id": "P20-A02",
+        "label": "Inspect difference",
+        "input": "Choose mismatched field",
+        "outcome": "Show approved and observed values and affected requirements"
+      },
+      {
+        "id": "P20-A03",
+        "label": "Create recovery task",
+        "input": "Assign accountable owner",
+        "outcome": "Open P21 and link the original action"
+      },
+      {
+        "id": "P20-A04",
+        "label": "Accept verified completion",
+        "input": "All required observations match",
+        "outcome": "Close eligible actions and update project readiness"
+      },
+      {
+        "id": "P20-A05",
+        "label": "Export reconciliation",
+        "input": "Choose accessible evidence format",
+        "outcome": "Download actual fixture report with source and simulated status"
+      }
+    ]
+  },
+  {
+    "id": "P21",
+    "title": "Exceptions and recovery worklist",
+    "route": "/projects/:id/exceptions",
+    "roles": "Integration Operator and Deployment Operator",
+    "pattern": "List Report and Object Page",
+    "purpose": "Turn failures into owned decisions with safe recovery and no hidden retry loops.",
+    "actions": [
+      {
+        "id": "P21-A01",
+        "label": "Inspect exception",
+        "input": "Select failed exchange or validation",
+        "outcome": "Show category, sanitized evidence and affected gate"
+      },
+      {
+        "id": "P21-A02",
+        "label": "Assign owner",
+        "input": "Choose eligible operator",
+        "outcome": "Record assignment and notify"
+      },
+      {
+        "id": "P21-A03",
+        "label": "Retry eligible operation",
+        "input": "Review safe-retry assessment",
+        "outcome": "Run read-only or proven-uncommitted retry; ambiguous writes route to reconciliation"
+      },
+      {
+        "id": "P21-A04",
+        "label": "Complete attended task",
+        "input": "Enter required evidence and result",
+        "outcome": "Record reported completion then require readback before verified state"
+      },
+      {
+        "id": "P21-A05",
+        "label": "Escalate",
+        "input": "Enter reason",
+        "outcome": "Create in-app escalation and retain return context"
+      }
+    ]
+  },
+  {
+    "id": "P22",
+    "title": "Realize Test and qualification",
+    "route": "/projects/:id/quality",
+    "roles": "QA Lead and Business Owner",
+    "pattern": "List Report and Object Page",
+    "purpose": "Demonstrate product qualification and selected pilot scenarios without claiming the future full process-testing agent.",
+    "actions": [
+      {
+        "id": "P22-A01",
+        "label": "Run demo suite",
+        "input": "Select deterministic fixture tests",
+        "outcome": "Show queued/running/passed/failed results linked to feature and TC"
+      },
+      {
+        "id": "P22-A02",
+        "label": "Inspect failure",
+        "input": "Choose failed test",
+        "outcome": "Open assertion, evidence and affected gate"
+      },
+      {
+        "id": "P22-A03",
+        "label": "Record UAT result",
+        "input": "Enter permitted business outcome",
+        "outcome": "Persist acceptance or defect with accountable owner"
+      },
+      {
+        "id": "P22-A04",
+        "label": "Create ALM task",
+        "input": "Confirm mapped target",
+        "outcome": "Simulate correlated task creation and show resulting external ID"
+      },
+      {
+        "id": "P22-A05",
+        "label": "Request quality gate",
+        "input": "Use complete evidence set",
+        "outcome": "Create approval or show missing tests and unresolved defects"
+      }
+    ]
+  },
+  {
+    "id": "P23",
+    "title": "Evidence and audit explorer",
+    "route": "/projects/:id/evidence",
+    "roles": "Auditor and authorized project roles",
+    "pattern": "List Report and Object Page",
+    "purpose": "Make every decision and simulated privileged attempt traceable from source through outcome.",
+    "actions": [
+      {
+        "id": "P23-A01",
+        "label": "Search audit",
+        "input": "Filter actor time BR or package",
+        "outcome": "Return authorized events and stable correlation references"
+      },
+      {
+        "id": "P23-A02",
+        "label": "Open lineage",
+        "input": "Select artifact",
+        "outcome": "Traverse requirement, proposal, approval, action and observation"
+      },
+      {
+        "id": "P23-A03",
+        "label": "Inspect redaction",
+        "input": "Select restricted field",
+        "outcome": "Explain policy without revealing hidden value"
+      },
+      {
+        "id": "P23-A04",
+        "label": "Export bundle",
+        "input": "Confirm export entitlement",
+        "outcome": "Download a real demo evidence file with manifest and simulation label"
+      }
+    ]
+  },
+  {
+    "id": "P24",
+    "title": "Run handover and pilot health",
+    "route": "/projects/:id/run",
+    "roles": "Support Operator and Delivery Lead",
+    "pattern": "Overview and Object Page",
+    "purpose": "Close the MVP story with ownership, known limitations and pilot monitoring; full Run automation remains future scope.",
+    "actions": [
+      {
+        "id": "P24-A01",
+        "label": "Open runbook",
+        "input": "Select a known issue",
+        "outcome": "Show recovery procedure and responsible owner"
+      },
+      {
+        "id": "P24-A02",
+        "label": "Inspect pilot health",
+        "input": "Select health indicator",
+        "outcome": "Open correlated demo alerts and last-observed state"
+      },
+      {
+        "id": "P24-A03",
+        "label": "Accept handover",
+        "input": "Confirm complete evidence",
+        "outcome": "Record authorized handover or list missing artifacts"
+      },
+      {
+        "id": "P24-A04",
+        "label": "Record support task",
+        "input": "Enter incident description",
+        "outcome": "Create owned demo task with project linkage"
+      },
+      {
+        "id": "P24-A05",
+        "label": "Open future capability",
+        "input": "Select roadmap topic",
+        "outcome": "Show an interactive future-scope explanation and return route"
+      }
+    ]
+  },
+  {
+    "id": "P25",
+    "title": "Benefits and outcome narrative",
+    "route": "/projects/:id/value",
+    "roles": "Sponsor and Delivery Lead",
+    "pattern": "Analytical overview",
+    "purpose": "Explain how grounded proposals, reusable structures, approvals and verified execution reduce avoidable effort and risk.",
+    "actions": [
+      {
+        "id": "P25-A01",
+        "label": "Inspect metric",
+        "input": "Select coverage time or rework indicator",
+        "outcome": "Show denominator, event trail and whether observed or illustrative"
+      },
+      {
+        "id": "P25-A02",
+        "label": "Edit planning assumption",
+        "input": "Change baseline hours or unit cost",
+        "outcome": "Recalculate scenario benefit and label it illustrative"
+      },
+      {
+        "id": "P25-A03",
+        "label": "Compare journey",
+        "input": "Choose baseline versus assisted mode",
+        "outcome": "Show step counts and human checkpoints with assumptions"
+      },
+      {
+        "id": "P25-A04",
+        "label": "Export executive summary",
+        "input": "Choose permitted report",
+        "outcome": "Download a real demo report including caveats and open risks"
+      }
+    ]
+  },
+  {
+    "id": "P26",
+    "title": "Access and governance administration",
+    "route": "/projects/:id/access",
+    "roles": "Administrator and Security Reviewer",
+    "pattern": "List Report and Object Page",
+    "purpose": "Demonstrate permission boundaries, access expiry and audit-export separation without allowing role escalation from chat.",
+    "actions": [
+      {
+        "id": "P26-A01",
+        "label": "Inspect persona grants",
+        "input": "Select seeded user",
+        "outcome": "Show permitted actions and organization scope"
+      },
+      {
+        "id": "P26-A02",
+        "label": "Change demo grant",
+        "input": "Choose allowed scope and expiry",
+        "outcome": "Record audited demo access change and refresh navigation"
+      },
+      {
+        "id": "P26-A03",
+        "label": "Revoke access",
+        "input": "Confirm user scope",
+        "outcome": "Deny subsequent protected routes and show safe error"
+      },
+      {
+        "id": "P26-A04",
+        "label": "Test denied route",
+        "input": "Choose predefined negative case",
+        "outcome": "Show access denied and authorized return option"
+      }
+    ]
+  },
+  {
+    "id": "P27",
+    "title": "Process application and architecture context",
+    "route": "/projects/:id/architecture",
+    "roles": "Enterprise Architect and Functional Consultant",
+    "pattern": "Relationship list and Object Page",
+    "purpose": "Connect Signavio process context to LeanIX application and capability references and the implementation scope.",
+    "actions": [
+      {
+        "id": "P27-A01",
+        "label": "Select relation",
+        "input": "Choose process application or capability",
+        "outcome": "Open provenance, lifecycle and owner details"
+      },
+      {
+        "id": "P27-A02",
+        "label": "Open Signavio context",
+        "input": "Select process reference",
+        "outcome": "Show labeled simulated process record and linked scope candidates"
+      },
+      {
+        "id": "P27-A03",
+        "label": "Open LeanIX context",
+        "input": "Select fact-sheet reference",
+        "outcome": "Show labeled simulated application record and supported process links"
+      },
+      {
+        "id": "P27-A04",
+        "label": "Assess impact",
+        "input": "Choose scope change",
+        "outcome": "Highlight affected architecture relations and require review"
+      },
+      {
+        "id": "P27-A05",
+        "label": "Refresh mapped context",
+        "input": "Choose read-only synchronization",
+        "outcome": "Show simulated synchronization, source ownership and conflict state"
+      }
+    ]
+  }
+]

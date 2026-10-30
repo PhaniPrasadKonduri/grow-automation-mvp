@@ -1,0 +1,54 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.OrganizationNodeDetail"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="orgNodePage" title="Organization object detail" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{orgNode>/label}"
+          number="{orgNode>/code}"
+          intro="Edit legal attributes, review assignments and compare the current design to the observed structure."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Edit attributes" press=".onEditAttributes"/>
+          <Button text="Manage assignments" press=".onManageAssignments"/>
+          <Button text="Compare observed target" press=".onCompareObservedTarget"/>
+          <Button text="Inspect impact" press=".onInspectImpact"/>
+          <Button text="Return to designer" type="Emphasized" press=".onReturnToDesigner"/>
+        </Toolbar>
+
+        <HBox class="sapUiSmallMarginTop" width="100%">
+          <VBox width="48%" class="sapUiSmallMarginEnd">
+            <Panel headerText="Attributes">
+              <content>
+                <List>
+                  <StandardListItem title="Code" description="{orgNode>/code}"/>
+                  <StandardListItem title="Country" description="{orgNode>/country}"/>
+                  <StandardListItem title="Currency" description="{orgNode>/currency}"/>
+                  <StandardListItem title="Parent" description="{orgNode>/parent}"/>
+                </List>
+              </content>
+            </Panel>
+          </VBox>
+
+          <VBox width="52%">
+            <Panel headerText="Assignments and impact">
+              <content>
+                <Text text="{orgNode>/impactSummary}" class="sapUiSmallMarginBottom"/>
+                <List items="{orgNode>/assignments}">
+                  <items>
+                    <StandardListItem title="{orgNode>label}" description="{orgNode>status}"/>
+                  </items>
+                </List>
+              </content>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

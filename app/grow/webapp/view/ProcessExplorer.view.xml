@@ -1,0 +1,66 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.ProcessExplorer"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="processPage" title="Process and architecture explorer" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{project>/projectName}"
+          number="{project>/projectId}"
+          intro="Browse the process catalog, review scope candidates and map supporting applications without claiming live process automation coverage."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Select domain or process" press=".onSelectDomainOrProcess"/>
+          <Button text="View process flow" press=".onViewProcessFlow"/>
+          <Button text="Inspect application relation" press=".onInspectApplicationRelation"/>
+          <Button text="Add to review" type="Emphasized" press=".onAddToReview"/>
+        </Toolbar>
+
+        <HBox class="sapUiSmallMarginTop" width="100%">
+          <VBox width="45%" class="sapUiSmallMarginEnd">
+            <Title text="Process catalog" level="H3"/>
+            <List id="processList" items="{process>/items}" mode="SingleSelectMaster" selectionChange=".onProcessSelect">
+              <items>
+                <StandardListItem
+                  title="{process>label}"
+                  description="{process>domain}"
+                  info="{process>status}"
+                  type="Active"/>
+              </items>
+            </List>
+          </VBox>
+
+          <VBox width="55%">
+            <Title text="Selected process context" level="H3"/>
+            <Panel class="sapUiSmallMarginTop" headerText="{process>/selected/label}">
+              <content>
+                <VBox class="sapUiTinyMargin">
+                  <HBox>
+                    <Label text="Domain" class="sapUiTinyMarginEnd"/>
+                    <Text text="{process>/selected/domain}"/>
+                  </HBox>
+                  <HBox class="sapUiTinyMarginTop">
+                    <Label text="BR / TC" class="sapUiTinyMarginEnd"/>
+                    <Text text="{process>/selected/brTc}"/>
+                  </HBox>
+                  <HBox class="sapUiTinyMarginTop">
+                    <Label text="Supporting system" class="sapUiTinyMarginEnd"/>
+                    <Text text="{process>/selected/system}"/>
+                  </HBox>
+                  <HBox class="sapUiTinyMarginTop">
+                    <Label text="Scope candidates" class="sapUiTinyMarginEnd"/>
+                    <Text text="{process>/selected/scopeCandidates}"/>
+                  </HBox>
+                </VBox>
+              </content>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

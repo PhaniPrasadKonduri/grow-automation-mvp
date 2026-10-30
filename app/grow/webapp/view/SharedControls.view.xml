@@ -1,0 +1,19 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.SharedControls"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  displayBlock="true">
+  <Page title="Shared controls registry" showHeader="true">
+    <content>
+      <VBox class="sapUiSmallMargin">
+        <Title text="Common control families C01-C24" level="H2"/>
+        <List id="controlList" items="{/controls}">
+          <StandardListItem
+            title="{id} - {control}"
+            description="{outcome}"
+            press=".onSelectControl"/>
+        </List>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

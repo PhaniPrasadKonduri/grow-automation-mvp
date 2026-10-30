@@ -1,0 +1,57 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.ScopeCandidateDetail"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="scopeDetailPage" title="Scope candidate detail" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{scopeDetail>/candidateName}"
+          number="{scopeDetail>/sapId}"
+          intro="Exact candidate identity, prerequisites and evidence trail for the proposed automation scope."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Inspect SAP identity" press=".onInspectSapIdentity"/>
+          <Button text="Explain recommendation" press=".onExplainRecommendation"/>
+          <Button text="Resolve prerequisite" press=".onResolvePrerequisite"/>
+          <Button text="Apply reviewer decision" press=".onApplyReviewerDecision"/>
+          <Button text="Prepare activation package" type="Emphasized" press=".onPrepareActivationPackage"/>
+        </Toolbar>
+
+        <HBox class="sapUiSmallMarginTop" width="100%">
+          <VBox class="sapUiSmallMarginEnd" width="48%">
+            <Panel headerText="SAP identity">
+              <content>
+                <List>
+                  <StandardListItem title="SAP ID" description="{scopeDetail>/sapId}"/>
+                  <StandardListItem title="Title" description="{scopeDetail>/title}"/>
+                  <StandardListItem title="Release" description="{scopeDetail>/release}"/>
+                  <StandardListItem title="Verification" description="{scopeDetail>/verification}"/>
+                </List>
+              </content>
+            </Panel>
+          </VBox>
+
+          <VBox width="52%">
+            <Panel headerText="Recommendation and prerequisites">
+              <content>
+                <Text text="{scopeDetail>/recommendation}" class="sapUiSmallMarginBottom"/>
+                <List items="{scopeDetail>/prerequisites}">
+                  <items>
+                    <StandardListItem
+                      title="{scopeDetail>label}"
+                      description="{scopeDetail>status}"
+                      type="Active"/>
+                  </items>
+                </List>
+              </content>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

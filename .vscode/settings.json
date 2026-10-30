@@ -1,0 +1,21 @@
+{
+  "editor.formatOnSave": true,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/.runtime": true,
+    "**/dist": true,
+    "**/coverage": true,
+    "**/artifacts": true,
+    "**/gen": true
+  },
+  "files.exclude": {
+    "**/.runtime": true,
+    "**/coverage": true,
+    "**/artifacts": true,
+    "**/dist": true,
+    "**/gen": true,
+    "**/node_modules": true
+  }
+}

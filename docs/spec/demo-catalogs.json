@@ -1,0 +1,385 @@
+{
+  "status": "Synthetic prototype configuration contracts, not verified SAP scope or CBC metadata",
+  "primaryProjectId": "NORTHSTAR-DEMO",
+  "secondaryProjectId": "RESTRICTED-DEMO",
+  "primaryTargetId": "S4-PILOT",
+  "configurationProposalId": "CFG-DEMO-014",
+  "deploymentPackageId": "PKG-DEMO-007",
+  "entities": [
+    {
+      "nodeId": "ORG-CC-1000",
+      "companyCode": "1000",
+      "country": "IN",
+      "currency": "INR",
+      "name": "Northstar IN Manufacturing Demo",
+      "plant": "IN01"
+    },
+    {
+      "nodeId": "ORG-CC-1010",
+      "companyCode": "1010",
+      "country": "IN",
+      "currency": "INR",
+      "name": "Northstar IN Services Demo",
+      "plant": "IN02"
+    },
+    {
+      "nodeId": "ORG-CC-2000",
+      "companyCode": "2000",
+      "country": "DE",
+      "currency": "EUR",
+      "name": "Northstar DE Manufacturing Demo",
+      "plant": "DE01"
+    },
+    {
+      "nodeId": "ORG-CC-2010",
+      "companyCode": "2010",
+      "country": "DE",
+      "currency": "EUR",
+      "name": "Northstar DE Services Demo",
+      "plant": "DE02"
+    },
+    {
+      "nodeId": "ORG-CC-3000",
+      "companyCode": "3000",
+      "country": "US",
+      "currency": "USD",
+      "name": "Northstar US Manufacturing Demo",
+      "plant": "US01"
+    },
+    {
+      "nodeId": "ORG-CC-3010",
+      "companyCode": "3010",
+      "country": "US",
+      "currency": "USD",
+      "name": "Northstar US Services Demo",
+      "plant": "US02"
+    },
+    {
+      "nodeId": "ORG-CC-4000",
+      "companyCode": "4000",
+      "country": "GB",
+      "currency": "GBP",
+      "name": "Northstar GB Manufacturing Demo",
+      "plant": "GB01"
+    },
+    {
+      "nodeId": "ORG-CC-4010",
+      "companyCode": "4010",
+      "country": "GB",
+      "currency": "GBP",
+      "name": "Northstar GB Services Demo",
+      "plant": "GB02"
+    },
+    {
+      "nodeId": "ORG-CC-5000",
+      "companyCode": "5000",
+      "country": "SG",
+      "currency": "SGD",
+      "name": "Northstar SG Manufacturing Demo",
+      "plant": "SG01"
+    },
+    {
+      "nodeId": "ORG-CC-5010",
+      "companyCode": "5010",
+      "country": "SG",
+      "currency": "SGD",
+      "name": "Northstar SG Services Demo",
+      "plant": "SG02"
+    }
+  ],
+  "organizationTypes": [
+    "CompanyCode",
+    "Plant",
+    "StorageLocation",
+    "PurchasingOrganization",
+    "PurchasingGroup",
+    "SalesOrganization",
+    "DistributionChannel",
+    "Division",
+    "SalesArea",
+    "ShippingPoint"
+  ],
+  "scopeCandidates": [
+    {
+      "id": "DEMO-SCOPE-01",
+      "concept": "Supplier creation and maintenance",
+      "requirementId": "BR-03-001",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-02",
+      "concept": "Quotation requests and offer comparison",
+      "requirementId": "BR-03-002",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-03",
+      "concept": "Purchasing contracts and negotiated prices",
+      "requirementId": "BR-03-003",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-04",
+      "concept": "Approved sources of supply",
+      "requirementId": "BR-03-004",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-05",
+      "concept": "Raw material and component purchases",
+      "requirementId": "BR-03-005",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-06",
+      "concept": "Requisition and purchase order approvals",
+      "requirementId": "BR-03-009",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-07",
+      "concept": "Goods receipt against purchase orders",
+      "requirementId": "BR-03-010",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-08",
+      "concept": "Invoice matching and verification",
+      "requirementId": "BR-03-011",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-09",
+      "concept": "Operating and group charts of accounts",
+      "requirementId": "BR-12-001",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-10",
+      "concept": "Journals accruals and recurring entries",
+      "requirementId": "BR-12-002",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-11",
+      "concept": "Supplier liabilities and payments",
+      "requirementId": "BR-12-003",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-12",
+      "concept": "Customer receipts collections and overdue balances",
+      "requirementId": "BR-12-004",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-13",
+      "concept": "Bank statement reconciliation",
+      "requirementId": "BR-12-005",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-14",
+      "concept": "Cost centers and profit centers",
+      "requirementId": "BR-12-008",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-15",
+      "concept": "Foreign currency valuation and period end adjustments",
+      "requirementId": "BR-12-014",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    },
+    {
+      "id": "DEMO-SCOPE-16",
+      "concept": "Entity financial statements",
+      "requirementId": "BR-12-015",
+      "verification": "Synthetic concept; replace with target-release verified SAP identity only through reviewed catalog update"
+    }
+  ],
+  "policySource": {
+    "id": "DEMO-POLICY-001",
+    "status": "Synthetic assumption, not client-approved",
+    "text": "Illustrative pilot uses 45 payment days, two approval levels, INR 10000 purchase approval threshold, 2 percent invoice tolerance and INR 50000 journal review threshold. These values demonstrate review and validation only."
+  },
+  "activities": [
+    {
+      "id": "DEMO-PT",
+      "title": "Payment terms",
+      "br": "BR-12-003",
+      "fields": {
+        "termCode": {
+          "type": "string",
+          "pattern": "D[0-9]{3}",
+          "observed": "D030",
+          "proposed": "D045"
+        },
+        "days": {
+          "type": "integer",
+          "min": 0,
+          "max": 365,
+          "observed": 30,
+          "proposed": 45
+        }
+      },
+      "crossRule": "termCode day digits must match days",
+      "pathway": "attended"
+    },
+    {
+      "id": "DEMO-PO-APP",
+      "title": "Purchase approval thresholds",
+      "br": "BR-03-009",
+      "fields": {
+        "threshold": {
+          "type": "decimal",
+          "min": 0,
+          "observed": 5000,
+          "proposed": 10000
+        },
+        "currency": {
+          "type": "enum",
+          "values": [
+            "INR"
+          ],
+          "proposed": "INR"
+        },
+        "levels": {
+          "type": "integer",
+          "min": 1,
+          "max": 3,
+          "proposed": 2
+        }
+      },
+      "crossRule": "Currency must match selected demo company policy; proposer cannot be sole approver",
+      "pathway": "API simulation"
+    },
+    {
+      "id": "DEMO-INV-TOL",
+      "title": "Invoice tolerance",
+      "br": "BR-03-011",
+      "fields": {
+        "percentage": {
+          "type": "decimal",
+          "min": 0,
+          "max": 5,
+          "observed": 1,
+          "proposed": 2
+        }
+      },
+      "crossRule": "Above allowed maximum blocks submission",
+      "pathway": "upload simulation"
+    },
+    {
+      "id": "DEMO-JE-REV",
+      "title": "Journal review threshold",
+      "br": "BR-12-002",
+      "fields": {
+        "threshold": {
+          "type": "decimal",
+          "min": 0,
+          "observed": 25000,
+          "proposed": 50000
+        },
+        "currency": {
+          "type": "enum",
+          "values": [
+            "INR"
+          ],
+          "proposed": "INR"
+        }
+      },
+      "crossRule": "Finance approver required; no self approval",
+      "pathway": "UI simulation"
+    },
+    {
+      "id": "DEMO-NUM-RNG",
+      "title": "Document number interval",
+      "br": "BR-12-002",
+      "fields": {
+        "start": {
+          "type": "integer",
+          "proposed": 100000
+        },
+        "end": {
+          "type": "integer",
+          "proposed": 199999
+        }
+      },
+      "crossRule": "start < end; no overlap; specialist review and attended recovery; no automatic rollback",
+      "pathway": "attended"
+    },
+    {
+      "id": "DEMO-ORG-REF",
+      "title": "Company assignment reference",
+      "br": "BR-12-008",
+      "fields": {
+        "companyCode": {
+          "type": "OrganizationReference",
+          "objectType": "CompanyCode"
+        }
+      },
+      "crossRule": "Referenced company must exist and have verified observation",
+      "pathway": "API simulation"
+    },
+    {
+      "id": "DEMO-CUR-CHK",
+      "title": "Company currency validation",
+      "br": "BR-12-014",
+      "fields": {
+        "currency": {
+          "type": "DerivedEnum",
+          "source": "selected CompanyCode.currency"
+        }
+      },
+      "crossRule": "Proposed currency cannot contradict organization; no legal currency change performed",
+      "pathway": "read-only validation"
+    },
+    {
+      "id": "DEMO-PUR-GRP",
+      "title": "Purchasing responsibility",
+      "br": "BR-03-005",
+      "fields": {
+        "purchasingGroup": {
+          "type": "OrganizationReference",
+          "objectType": "PurchasingGroup"
+        },
+        "plant": {
+          "type": "OrganizationReference",
+          "objectType": "Plant"
+        }
+      },
+      "crossRule": "Selected plant and purchasing group must share permitted project scope",
+      "pathway": "UI simulation"
+    },
+    {
+      "id": "DEMO-GR-CTRL",
+      "title": "Receipt control",
+      "br": "BR-03-010",
+      "fields": {
+        "receiptRequired": {
+          "type": "boolean",
+          "observed": false,
+          "proposed": true
+        }
+      },
+      "crossRule": "Required receipt control cannot be disabled for the approved demo raw-material scenario",
+      "pathway": "upload simulation"
+    },
+    {
+      "id": "DEMO-CLOSE",
+      "title": "Close task deadline",
+      "br": "BR-12-015",
+      "fields": {
+        "dayOfFollowingMonth": {
+          "type": "integer",
+          "min": 1,
+          "max": 28,
+          "observed": 7,
+          "proposed": 5
+        }
+      },
+      "crossRule": "Illustrative working deadline only; no statutory reporting deadline inferred",
+      "pathway": "attended"
+    }
+  ]
+}

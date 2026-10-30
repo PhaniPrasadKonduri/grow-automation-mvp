@@ -1,0 +1,50 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.AccessAndEntitlements"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="accessPage" title="Access and entitlements" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{access>/projectName}"
+          number="{access>/projectId}"
+          intro="Review role scope, entitlements and project permissions without allowing any role escalation from the demo flow."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Inspect persona grants" press=".onInspectPersonaGrants"/>
+          <Button text="Change demo grant" press=".onChangeDemoGrant"/>
+          <Button text="Revoke access" press=".onRevokeAccess"/>
+          <Button text="Test denied route" type="Emphasized" press=".onTestDeniedRoute"/>
+        </Toolbar>
+
+        <MessageStrip
+          class="sapUiSmallMarginTopBottom"
+          type="{access>/bannerType}"
+          showIcon="true"
+          text="{access>/bannerText}"/>
+
+        <Table items="{access>/grants}" mode="SingleSelectMaster" selectionChange=".onSelectGrant">
+          <columns>
+            <Column width="180px"><Text text="Persona"/></Column>
+            <Column width="220px"><Text text="Allowed actions"/></Column>
+            <Column width="180px"><Text text="Entity scope"/></Column>
+            <Column><Text text="Expiry"/></Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{access>persona}"/>
+                <Text text="{access>allowedActions}"/>
+                <Text text="{access>scope}"/>
+                <Text text="{access>expiry}"/>
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

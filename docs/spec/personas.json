@@ -1,0 +1,160 @@
+[
+  {
+    "id": "sponsor",
+    "grants": [
+      "Read scoped readiness and benefits"
+    ],
+    "denies": [
+      "Proposal edit",
+      "Approve configuration",
+      "Dispatch"
+    ]
+  },
+  {
+    "id": "deliveryLead",
+    "grants": [
+      "Manage project/owners",
+      "Inspect gates",
+      "Route work"
+    ],
+    "denies": [
+      "Bypass specialist approval"
+    ]
+  },
+  {
+    "id": "analyst",
+    "grants": [
+      "Upload BPD",
+      "Edit atomic requirements",
+      "Resolve assumptions"
+    ],
+    "denies": [
+      "Self approval",
+      "Dispatch"
+    ]
+  },
+  {
+    "id": "functionalConsultant",
+    "grants": [
+      "Propose scope",
+      "Propose organization",
+      "Review fit"
+    ],
+    "denies": [
+      "Approve own version"
+    ]
+  },
+  {
+    "id": "configurationConsultant",
+    "grants": [
+      "Propose and revise typed values"
+    ],
+    "denies": [
+      "Sole finance approval",
+      "Release authorization"
+    ]
+  },
+  {
+    "id": "scopeApprover",
+    "grants": [
+      "Approve assigned scope in authorized project"
+    ],
+    "denies": [
+      "Approve own version"
+    ]
+  },
+  {
+    "id": "organizationApprover",
+    "grants": [
+      "Approve assigned organization in authorized project"
+    ],
+    "denies": [
+      "Approve own version"
+    ]
+  },
+  {
+    "id": "financeApprover",
+    "grants": [
+      "Approve assigned finance-sensitive values"
+    ],
+    "denies": [
+      "Dispatch",
+      "Change privileges",
+      "Approve own version"
+    ]
+  },
+  {
+    "id": "releaseManager",
+    "grants": [
+      "Authorize eligible immutable package"
+    ],
+    "denies": [
+      "Bypass tests target or freshness"
+    ]
+  },
+  {
+    "id": "deploymentOperator",
+    "grants": [
+      "Execute authorized simulation",
+      "Pause",
+      "Reconcile"
+    ],
+    "denies": [
+      "Grant business approval",
+      "Blind retry unknown"
+    ]
+  },
+  {
+    "id": "integrationAdmin",
+    "grants": [
+      "Inspect connection capabilities",
+      "Manage demo grants if separately authorized"
+    ],
+    "denies": [
+      "Raw secrets",
+      "Business value approval"
+    ]
+  },
+  {
+    "id": "qaLead",
+    "grants": [
+      "Run demo qualification",
+      "Record tests"
+    ],
+    "denies": [
+      "Alter execution evidence"
+    ]
+  },
+  {
+    "id": "businessOwner",
+    "grants": [
+      "Record assigned UAT and quality decision"
+    ],
+    "denies": [
+      "Alter execution evidence",
+      "Self approval"
+    ]
+  },
+  {
+    "id": "auditor",
+    "grants": [
+      "Read permitted evidence"
+    ],
+    "denies": [
+      "Export without separate entitlement",
+      "Write",
+      "Dispatch"
+    ]
+  },
+  {
+    "id": "supportOperator",
+    "grants": [
+      "Pilot handover tasks",
+      "Runbooks",
+      "Demo support incidents"
+    ],
+    "denies": [
+      "Privileged execution unless separately granted"
+    ]
+  }
+]

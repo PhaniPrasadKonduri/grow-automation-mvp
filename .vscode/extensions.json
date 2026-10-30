@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml",
+    "ms-vscode.vscode-json",
+    "SAPSE.sap-ux-fiori-tools",
+    "SAPSE.vscode-cds"
+  ]
+}

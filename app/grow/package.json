@@ -1,0 +1,16 @@
+{
+  "name": "grow-ui",
+  "private": true,
+  "version": "0.1.0",
+  "description": "UI5 frontend for the GROW Automation MVP.",
+  "scripts": {
+    "start": "ui5 serve --config ui5.yaml --open",
+    "dev": "ui5 serve --config ui5.yaml --port 8080",
+    "build": "ui5 build --config ui5.yaml --clean-dest",
+    "test": "echo 'UI tests not yet implemented in scaffold stage' && exit 1"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4.0.71",
+    "ui5-middleware-simpleproxy": "^3.0.0"
+  }
+}

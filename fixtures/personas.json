@@ -1,0 +1,191 @@
+[
+  {
+    "id": "sponsor",
+    "grants": [
+      "Read scoped readiness and benefits"
+    ],
+    "denies": [
+      "Proposal edit",
+      "Approve configuration",
+      "Dispatch"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000"]
+  },
+  {
+    "id": "deliveryLead",
+    "grants": [
+      "Manage project/owners",
+      "Inspect gates",
+      "Route work"
+    ],
+    "denies": [
+      "Bypass specialist approval"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000", "4000", "5000"]
+  },
+  {
+    "id": "analyst",
+    "grants": [
+      "Upload BPD",
+      "Edit atomic requirements",
+      "Resolve assumptions"
+    ],
+    "denies": [
+      "Self approval",
+      "Dispatch"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000"]
+  },
+  {
+    "id": "functionalConsultant",
+    "grants": [
+      "Propose scope",
+      "Propose organization",
+      "Review fit"
+    ],
+    "denies": [
+      "Approve own version"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000"]
+  },
+  {
+    "id": "configurationConsultant",
+    "grants": [
+      "Propose and revise typed values"
+    ],
+    "denies": [
+      "Sole finance approval",
+      "Release authorization"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000"]
+  },
+  {
+    "id": "scopeApprover",
+    "grants": [
+      "Approve assigned scope in authorized project"
+    ],
+    "denies": [
+      "Approve own version"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000"]
+  },
+  {
+    "id": "organizationApprover",
+    "grants": [
+      "Approve assigned organization in authorized project"
+    ],
+    "denies": [
+      "Approve own version"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000"]
+  },
+  {
+    "id": "financeApprover",
+    "grants": [
+      "Approve assigned finance-sensitive values"
+    ],
+    "denies": [
+      "Dispatch",
+      "Change privileges",
+      "Approve own version"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000", "4000"]
+  },
+  {
+    "id": "releaseManager",
+    "grants": [
+      "Authorize eligible immutable package"
+    ],
+    "denies": [
+      "Bypass tests target or freshness"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000", "4000", "5000"]
+  },
+  {
+    "id": "deploymentOperator",
+    "grants": [
+      "Execute authorized simulation",
+      "Pause",
+      "Reconcile"
+    ],
+    "denies": [
+      "Grant business approval",
+      "Blind retry unknown"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000"]
+  },
+  {
+    "id": "integrationAdmin",
+    "grants": [
+      "Inspect connection capabilities",
+      "Manage demo grants if separately authorized"
+    ],
+    "denies": [
+      "Raw secrets",
+      "Business value approval"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000"]
+  },
+  {
+    "id": "qaLead",
+    "grants": [
+      "Run demo qualification",
+      "Record tests"
+    ],
+    "denies": [
+      "Alter execution evidence"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000"]
+  },
+  {
+    "id": "businessOwner",
+    "grants": [
+      "Record assigned UAT and quality decision"
+    ],
+    "denies": [
+      "Alter execution evidence",
+      "Self approval"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000"]
+  },
+  {
+    "id": "auditor",
+    "grants": [
+      "Read permitted evidence"
+    ],
+    "denies": [
+      "Export without separate entitlement",
+      "Write",
+      "Dispatch"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000", "2000", "3000", "4000", "5000"],
+    "canExportAudit": true
+  },
+  {
+    "id": "supportOperator",
+    "grants": [
+      "Pilot handover tasks",
+      "Runbooks",
+      "Demo support incidents"
+    ],
+    "denies": [
+      "Privileged execution unless separately granted"
+    ],
+    "authorizedProjects": ["P-DEMO-001"],
+    "authorizedCompanyCodes": ["1000"]
+  }
+]

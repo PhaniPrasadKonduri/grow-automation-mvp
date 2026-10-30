@@ -1,0 +1,39 @@
+# Node / npm
+node_modules/
+.npm/
+
+# Generated outputs
+.gen/
+gen/
+coverage/
+artifacts/
+.runtime/
+app/grow/dist/
+
+# Logs and temp state
+*.log
+*.tmp
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+.cdsrc-private.json
+default-env.json
+*.pem
+*.key
+*.crt
+*.p12
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Mac / OS
+.DS_Store
+
+# Source documentation exceptions
+!docs/**/*.md
