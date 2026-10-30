@@ -1,0 +1,59 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.RiskGovernanceBoard"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  displayBlock="true">
+  <Page id="riskBoardPage" title="Risk and Governance Board" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <Title text="Risk posture and governance coverage" level="H1"/>
+
+        <layout:ResponsiveFlowLayout class="sapUiMediumMarginTop">
+          <VBox class="sapUiSmallMarginEnd" width="30%">
+            <GenericTile header="Policy coverage" subheader="96%">
+              <TileContent>
+                <NumericContent value="96" scale="%" valueColor="Good"/>
+              </TileContent>
+            </GenericTile>
+          </VBox>
+          <VBox class="sapUiSmallMarginEnd" width="30%">
+            <GenericTile header="Open risks" subheader="3 items">
+              <TileContent>
+                <NumericContent value="3" valueColor="Critical"/>
+              </TileContent>
+            </GenericTile>
+          </VBox>
+          <VBox width="30%">
+            <GenericTile header="Audit traceability" subheader="100%">
+              <TileContent>
+                <NumericContent value="100" scale="%" valueColor="Good"/>
+              </TileContent>
+            </GenericTile>
+          </VBox>
+        </layout:ResponsiveFlowLayout>
+
+        <HBox width="100%" class="sapUiMediumMarginTop">
+          <VBox width="50%" class="sapUiSmallMarginEnd">
+            <Panel headerText="Governance status">
+              <List>
+                <StandardListItem title="Approval compliance" description="92% within SLA" info="Healthy" infoState="Success"/>
+                <StandardListItem title="Stale approval exposure" description="1 item under review" info="Monitor" infoState="Warning"/>
+                <StandardListItem title="Exception escalation" description="3 cases assigned to owners" info="Contained" infoState="Information"/>
+              </List>
+            </Panel>
+          </VBox>
+
+          <VBox width="50%">
+            <Panel headerText="Executive risk narrative">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The current governance posture is stable and within policy tolerance. The remaining risks are contained and linked to explicit remediation owners. No uncontrolled deployment path or unsupported approval flow is active."/>
+                <Text class="sapUiTinyMarginTop" text="This is the evidence-based layer that gives leadership confidence that transformation execution is being governed, not simply accelerated."/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

@@ -1,0 +1,66 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.ValueImpactDashboard"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  displayBlock="true">
+  <Page id="valueDashboardPage" title="Value and Impact" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <Title text="Business value and strategic impact" level="H1"/>
+
+        <layout:ResponsiveFlowLayout class="sapUiMediumMarginTop">
+          <VBox class="sapUiSmallMarginEnd" width="24%">
+            <GenericTile header="Manual effort saved" subheader="42% reduction">
+              <TileContent>
+                <NumericContent value="42" scale="%" valueColor="Good"/>
+              </TileContent>
+            </GenericTile>
+          </VBox>
+          <VBox class="sapUiSmallMarginEnd" width="24%">
+            <GenericTile header="Rework avoided" subheader="18.4 hours">
+              <TileContent>
+                <NumericContent value="18.4" scale="h" valueColor="Good"/>
+              </TileContent>
+            </GenericTile>
+          </VBox>
+          <VBox class="sapUiSmallMarginEnd" width="24%">
+            <GenericTile header="Time to value" subheader="-31 days">
+              <TileContent>
+                <NumericContent value="31" scale="d" valueColor="Good"/>
+              </TileContent>
+            </GenericTile>
+          </VBox>
+          <VBox width="24%">
+            <GenericTile header="Executive confidence" subheader="High">
+              <TileContent>
+                <NumericContent value="92" scale="%" valueColor="Good"/>
+              </TileContent>
+            </GenericTile>
+          </VBox>
+        </layout:ResponsiveFlowLayout>
+
+        <HBox width="100%" class="sapUiMediumMarginTop">
+          <VBox width="60%" class="sapUiSmallMarginEnd">
+            <Panel headerText="Value narrative">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The transformation model reduces coordination overhead, codifies business rules, and standardizes deployment readiness checks. This enables a faster, more reliable transition to operating modes with less rework and clearer accountability."/>
+                <Text class="sapUiTinyMarginTop" text="When the program reaches a full-scale rollout, the expected savings are achieved by reducing manual handoffs, limiting exception rework, and increasing control confidence across approvals and deployment execution."/>
+              </VBox>
+            </Panel>
+          </VBox>
+
+          <VBox width="40%">
+            <Panel headerText="Impact levers">
+              <List>
+                <StandardListItem title="Fewer manual reviews" description="Operational effort reduced by 42%"/>
+                <StandardListItem title="Lower deployment variance" description="Exception exposure reduced by 34%"/>
+                <StandardListItem title="Higher transparency" description="Evidence everywhere and decisions traceable"/>
+              </List>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

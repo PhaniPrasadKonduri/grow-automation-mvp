@@ -1,0 +1,82 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.ExecutionRunOverview"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="executionRunPage" title="Execution run overview" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{run>/runName}"
+          number="{run>/runId}"
+          intro="Coordinate the current run plan, action status and the next allowed user decision before handing off the pilot."
+          backgroundDesign="Solid">
+          <statuses>
+            <ObjectStatus text="{run>/runStatus}" state="{run>/runState}"/>
+          </statuses>
+        </ObjectHeader>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Open runbook" press=".onOpenRunbook"/>
+          <Button text="Inspect pilot health" press=".onInspectPilotHealth"/>
+          <Button text="Accept handover" press=".onAcceptHandover"/>
+          <Button text="Record support task" press=".onRecordSupportTask"/>
+          <Button text="Open future capability" type="Emphasized" press=".onOpenFutureCapability"/>
+        </Toolbar>
+
+        <MessageStrip
+          class="sapUiSmallMarginTopBottom"
+          type="{run>/bannerType}"
+          showIcon="true"
+          text="{run>/bannerText}"/>
+
+        <HBox width="100%" class="sapUiSmallMarginTop">
+          <VBox width="55%" class="sapUiSmallMarginEnd">
+            <Panel headerText="Run ledger">
+              <Table id="runTable" items="{run>/steps}" mode="SingleSelectMaster" selectionChange=".onSelectStep">
+                <columns>
+                  <Column width="200px"><Text text="Action"/></Column>
+                  <Column width="150px"><Text text="Owner"/></Column>
+                  <Column width="120px"><Text text="Status"/></Column>
+                  <Column><Text text="Next step"/></Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text text="{run>action}"/>
+                      <Text text="{run>owner}"/>
+                      <ObjectStatus text="{run>status}" state="{run>statusState}"/>
+                      <Text text="{run>nextStep}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </Panel>
+          </VBox>
+
+          <VBox width="45%">
+            <Panel headerText="Selected action">
+              <VBox class="sapUiSmallMargin">
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Action"/>
+                  <Text text="{run>/selection/action}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Owner"/>
+                  <Text text="{run>/selection/owner}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Status"/>
+                  <Text text="{run>/selection/status}"/>
+                </HBox>
+                <Text text="Recovery procedure:" class="sapUiTinyMarginTop"/>
+                <Text text="{run>/selection/procedure}"/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

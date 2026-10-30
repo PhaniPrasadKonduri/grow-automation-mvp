@@ -66,6 +66,12 @@
         { "pattern": "", "name": "P00", "target": "P00" },
         { "pattern": "demo", "name": "P00Route", "target": "P00" },
         { "pattern": "home", "name": "P01", "target": "P01" },
+        { "pattern": "leadership", "name": "LeadershipOverview", "target": "LeadershipOverview" },
+        { "pattern": "executive", "name": "ExecutiveLandingPage", "target": "ExecutiveLandingPage" },
+        { "pattern": "phases", "name": "ProjectPhaseOverview", "target": "ProjectPhaseOverview" },
+        { "pattern": "value", "name": "ValueImpactDashboard", "target": "ValueImpactDashboard" },
+        { "pattern": "risk", "name": "RiskGovernanceBoard", "target": "RiskGovernanceBoard" },
+        { "pattern": "operations", "name": "OperatingReadinessBoard", "target": "OperatingReadinessBoard" },
         { "pattern": "shared-controls", "name": "sharedControls", "target": "sharedControls" },
         { "pattern": "projects/{id}", "name": "P02", "target": "P02" },
         { "pattern": "projects/{id}/discover", "name": "P03", "target": "P03" },
@@ -96,8 +102,8 @@
       ],
       "targets": {
         "P00": { "viewName": "DemoEntry", "viewLevel": 0 },
+        "P01": { "viewName": "ExecutiveLandingPage", "viewLevel": 1 },
         "sharedControls": { "viewName": "SharedControls", "viewLevel": 1 },
-        "P01": { "viewName": "RouteShell", "viewLevel": 1 },
         "P02": { "viewName": "RouteShell", "viewLevel": 2 },
         "P03": { "viewName": "RouteShell", "viewLevel": 3 },
         "P04": { "viewName": "PrepareProject", "viewLevel": 4 },
@@ -123,7 +129,12 @@
         "P24": { "viewName": "ExecutionRunOverview", "viewLevel": 24 },
         "P25": { "viewName": "ValueAndImpact", "viewLevel": 25 },
         "P26": { "viewName": "AccessAndEntitlements", "viewLevel": 26 },
-        "P27": { "viewName": "ArchitectureAndApplicationMap", "viewLevel": 27 }
+        "P27": { "viewName": "ArchitectureAndApplicationMap", "viewLevel": 27 },
+        "LeadershipOverview": { "viewName": "LeadershipOverview", "viewLevel": 1 },
+        "ProjectPhaseOverview": { "viewName": "ProjectPhaseOverview", "viewLevel": 2 },
+        "ValueImpactDashboard": { "viewName": "ValueImpactDashboard", "viewLevel": 2 },
+        "RiskGovernanceBoard": { "viewName": "RiskGovernanceBoard", "viewLevel": 3 },
+        "OperatingReadinessBoard": { "viewName": "OperatingReadinessBoard", "viewLevel": 4 }
       }
     }
   }

@@ -1,0 +1,115 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.DeploymentExecutionMonitor"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="deploymentExecutionPage" title="Deployment execution monitor" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="Deployment run"
+          number="{monitor>/runId}"
+          intro="Make simulated external activity observable and recoverable rather than animating an unconditional success."
+          backgroundDesign="Solid">
+          <statuses>
+            <ObjectStatus text="{monitor>/status}" state="{monitor>/state}"/>
+          </statuses>
+        </ObjectHeader>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Inspect action" press=".onInspectAction"/>
+          <Button text="Pause remaining actions" press=".onPauseRemainingActions"/>
+          <Button text="Reconcile unknown" press=".onReconcileUnknown"/>
+          <Button text="Open attended step" press=".onOpenAttendedStep"/>
+          <Button text="Open results" type="Emphasized" press=".onOpenResults"/>
+        </Toolbar>
+
+        <MessageStrip
+          class="sapUiSmallMarginTopBottom"
+          type="{monitor>/resultType}"
+          showIcon="true"
+          text="{monitor>/resultStatus/text}"/>
+
+        <HBox width="100%" class="sapUiSmallMarginTop">
+          <VBox width="40%" class="sapUiSmallMarginEnd">
+            <Panel headerText="Execution queue" expandable="false">
+              <List
+                id="deploymentStepList"
+                items="{monitor>/steps}"
+                mode="SingleSelectMaster"
+                selectionChange=".onSelectStep">
+                <StandardListItem
+                  title="{monitor>step}"
+                  description="{monitor>summary}"
+                  info="{monitor>statusText}"
+                  infoState="{monitor>state}"
+                  type="Active"/>
+              </List>
+            </Panel>
+          </VBox>
+
+          <VBox width="60%">
+            <Panel headerText="Selected action">
+              <VBox class="sapUiSmallMargin">
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Classification" class="sapUiTinyMarginEnd"/>
+                  <ObjectStatus text="{monitor>/selection/classification}" state="{monitor>/selection/classificationState}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Correlation" class="sapUiTinyMarginEnd"/>
+                  <Text text="{monitor>/selection/correlationId}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Attempts" class="sapUiTinyMarginEnd"/>
+                  <Text text="{monitor>/selection/attempts}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Observed state" class="sapUiTinyMarginEnd"/>
+                  <ObjectStatus text="{monitor>/selection/observedState}" state="{monitor>/selection/observedStateState}"/>
+                </HBox>
+                <Text text="{monitor>/selection/summary}" class="sapUiSmallMarginTop"/>
+              </VBox>
+            </Panel>
+
+            <Panel headerText="Human task" class="sapUiSmallMarginTop">
+              <VBox class="sapUiSmallMargin">
+                <Text text="Instructions" class="sapUiTinyMarginBottom"/>
+                <Text text="{monitor>/attended/instructions}"/>
+                <HBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+                  <Text text="Owner"/>
+                  <Text text="{monitor>/attended/owner}"/>
+                </HBox>
+                <HBox class="sapUiSmallMarginTop" justifyContent="SpaceBetween">
+                  <Text text="Evidence upload"/>
+                  <ObjectStatus text="{monitor>/attended/evidenceStatus}" state="{monitor>/attended/evidenceState}"/>
+                </HBox>
+              </VBox>
+            </Panel>
+
+            <Panel headerText="Verified evidence" class="sapUiSmallMarginTop">
+              <Table items="{monitor>/observations}">
+                <columns>
+                  <Column width="170px"><Text text="Observation"/></Column>
+                  <Column width="150px"><Text text="Source"/></Column>
+                  <Column width="130px"><Text text="Status"/></Column>
+                  <Column><Text text="Evidence"/></Column>
+                </columns>
+                <items>
+                  <ColumnListItem>
+                    <cells>
+                      <Text text="{monitor>observation}"/>
+                      <Text text="{monitor>source}"/>
+                      <ObjectStatus text="{monitor>status}" state="{monitor>state}"/>
+                      <Text text="{monitor>evidence}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

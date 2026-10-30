@@ -1,0 +1,57 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.DocumentIntake"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="documentIntakePage" title="TO BE document intake" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{project>/projectName}"
+          number="{project>/projectId}"
+          intro="Upload and validate process documents, then turn the current baseline into traceable requirement records."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Upload document" press=".onUploadDocument"/>
+          <Button text="Use BPD fixture" press=".onUseBpdFixture"/>
+          <Button text="Inspect source" press=".onInspectSource"/>
+          <Button text="Resolve upload issue" press=".onResolveUploadIssue"/>
+          <Button text="Review requirements" type="Emphasized" press=".onReviewRequirements"/>
+        </Toolbar>
+
+        <Panel headerText="Upload status" class="sapUiSmallMarginTop" expandable="true">
+          <content>
+            <HBox alignItems="Center">
+              <Label text="Status" class="sapUiSmallMarginEnd"/>
+              <ObjectStatus text="{document>/status}" state="{document>/state}"/>
+            </HBox>
+            <ProgressIndicator percentValue="{document>/progress}" displayValue="{document>/progress}%" class="sapUiSmallMarginTop"/>
+          </content>
+        </Panel>
+
+        <Table id="documentTable" items="{document>/revisions}" class="sapUiSmallMarginTop">
+          <columns>
+            <Column width="190px"><Text text="Revision"/></Column>
+            <Column width="220px"><Text text="Source"/></Column>
+            <Column width="150px"><Text text="Type"/></Column>
+            <Column width="150px"><Text text="Evidence"/></Column>
+            <Column><Text text="BR / TC IDs"/></Column>
+          </columns>
+          <items>
+            <ColumnListItem type="Navigation" press=".onSelectRevision">
+              <cells>
+                <Text text="{document>revision}"/>
+                <Text text="{document>source}"/>
+                <Text text="{document>type}"/>
+                <ObjectStatus text="{document>evidence}" state="{document>evidenceState}"/>
+                <Text text="{document>ids}"/>
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

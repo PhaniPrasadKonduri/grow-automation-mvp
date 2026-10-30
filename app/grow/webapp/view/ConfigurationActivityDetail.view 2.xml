@@ -1,0 +1,53 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.ConfigurationActivityDetail"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="configurationActivityPage" title="Configuration activity detail" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{activity>/activityId}"
+          number="{activity>/target}"
+          intro="Compare observed, proposed and approved values and make the source of each value visible."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Edit proposed value" press=".onEditProposedValue"/>
+          <Button text="View evidence" press=".onViewEvidence"/>
+          <Button text="Explain risk" press=".onExplainRisk"/>
+          <Button text="Refresh observed values" press=".onRefreshObservedValues"/>
+          <Button text="Submit or revise" type="Emphasized" press=".onSubmitOrRevise"/>
+        </Toolbar>
+
+        <MessageStrip
+          class="sapUiSmallMarginTopBottom"
+          type="{activity>/bannerType}"
+          showIcon="true"
+          text="{activity>/bannerText}"/>
+
+        <Table items="{activity>/values}">
+          <columns>
+            <Column width="200px"><Text text="Field"/></Column>
+            <Column width="180px"><Text text="Observed"/></Column>
+            <Column width="180px"><Text text="Proposed"/></Column>
+            <Column width="180px"><Text text="Approved"/></Column>
+            <Column><Text text="Source"/></Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{activity>field}"/>
+                <Text text="{activity>observed}"/>
+                <Text text="{activity>proposed}"/>
+                <Text text="{activity>approved}"/>
+                <Text text="{activity>source}"/>
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

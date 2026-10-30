@@ -1,0 +1,1899 @@
+[
+  {
+    "id": "F01-001",
+    "title": "Project lifecycle",
+    "epic": "Product and project foundation",
+    "priority": "P0",
+    "acceptance": "Project creates once and all required ownership fields persist.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F01-002",
+    "title": "Client and environment boundaries",
+    "epic": "Product and project foundation",
+    "priority": "P0",
+    "acceptance": "Cross-project identifiers cannot read or mutate another project.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F02-001",
+    "title": "Federated sign in",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "Expired or invalid tokens are denied on every protected endpoint.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-002",
+    "title": "Business roles",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "A read-only analyst cannot submit an execution command.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-003",
+    "title": "Organizational authorization",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "Cross-company negative tests deny both reads and writes.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-004",
+    "title": "Segregation of duties",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "The proposer cannot approve the same governed change.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-005",
+    "title": "Privileged technical identities",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "A runner cannot access unrelated projects or SAP targets.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-006",
+    "title": "Secret handling",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "Secrets are absent from prompts, payload exports and application logs.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-007",
+    "title": "Personal data minimization",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "Sensitive attributes are masked in model requests and evidence previews.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-008",
+    "title": "Authorization regression",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "Associated-entity and custom-action negative tests pass.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-009",
+    "title": "Access lifecycle",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "Revoked users lose application access and pending grants expire.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F02-010",
+    "title": "Audit access separation",
+    "epic": "Identity security and privacy",
+    "priority": "P0",
+    "acceptance": "Unauthorized export fails and the denial is recorded.",
+    "screens": [
+      "P00",
+      "P26",
+      "P17",
+      "P23"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F01-003",
+    "title": "Lifecycle taxonomy",
+    "epic": "Product and project foundation",
+    "priority": "P1",
+    "acceptance": "Phase transitions retain prerequisites and accountable decisions.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F01-004",
+    "title": "Decision and assumption register",
+    "epic": "Product and project foundation",
+    "priority": "P1",
+    "acceptance": "An unresolved country is surfaced and cannot become a valid country key.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F01-005",
+    "title": "Stable business identifiers",
+    "epic": "Product and project foundation",
+    "priority": "P1",
+    "acceptance": "References remain valid after a new source or proposal revision.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-001",
+    "title": "Word document intake",
+    "epic": "Knowledge and data foundation",
+    "priority": "P0",
+    "acceptance": "Duplicate uploads are detected and revisions remain distinguishable.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-002",
+    "title": "Source safety screening",
+    "epic": "Knowledge and data foundation",
+    "priority": "P0",
+    "acceptance": "Malicious document instructions cannot invoke privileged tools.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F01-006",
+    "title": "Product scope baseline",
+    "epic": "Product and project foundation",
+    "priority": "P1",
+    "acceptance": "Every selected feature has an owner and release classification.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F03-001",
+    "title": "Repository and conventions",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "Build, lint and type checks run from a documented clean checkout.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F03-002",
+    "title": "Development environments",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "Environment configuration is separated and contains no embedded secrets.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F03-003",
+    "title": "CAP service skeleton",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "Service metadata and error contracts pass contract checks.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F03-004",
+    "title": "HANA persistence and HDI",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "Schema deployment succeeds in test and migration evidence is retained.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F03-005",
+    "title": "Continuous integration",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "A failing required check prevents promotion.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F03-006",
+    "title": "Application deployment pipeline",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "A signed application release is traceable to commit and test evidence.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F03-007",
+    "title": "Dependency security",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "Critical unresolved findings block the candidate release.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F03-008",
+    "title": "Observability foundation",
+    "epic": "Engineering platform and release controls",
+    "priority": "P0",
+    "acceptance": "One request can be traced from UI command to verification result.",
+    "screens": [
+      "P05",
+      "P22",
+      "P24"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F05-001",
+    "title": "Durable business workflow",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "Restart resumes an approval wait without losing its state.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-002",
+    "title": "Version bound approvals",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "A changed target or payload requires a new approval.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-003",
+    "title": "Approval inbox",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "Only eligible approvers can decide the assigned item.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-004",
+    "title": "Policy evaluation",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "A valid approval cannot bypass a missing mandatory prerequisite.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-005",
+    "title": "Transactional dispatch",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "A process crash cannot silently lose an approved command.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-006",
+    "title": "Idempotency controls",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "Repeated requests return one logical action and no duplicate write.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-007",
+    "title": "Unknown outcome handling",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "A timeout after a possible write cannot trigger blind replay.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-008",
+    "title": "Execution evidence ledger",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "Every attempted privileged action has complete evidence.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F05-009",
+    "title": "Kill switch and pause",
+    "epic": "Workflow approvals and execution ledger",
+    "priority": "P0",
+    "acceptance": "Paused actions cannot start while read-only analysis remains usable.",
+    "screens": [
+      "P16",
+      "P17",
+      "P18",
+      "P19",
+      "P20",
+      "P23"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F06-001",
+    "title": "Responsive application shell",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P0",
+    "acceptance": "Agreed desktop, tablet and narrow layouts remain usable.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F06-002",
+    "title": "Project cockpit",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P0",
+    "acceptance": "Metrics drill into the underlying scoped records.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F07-001",
+    "title": "Landscape registry",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "Every command resolves an explicitly approved target.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F07-002",
+    "title": "Destination configuration",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "A missing or invalid destination blocks calls with a sanitized error.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F07-003",
+    "title": "Connectivity diagnostics",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "A reachable endpoint is not reported as business-ready without permission checks.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F07-004",
+    "title": "Capability registry",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "No write is generated without a validated operation route.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F07-005",
+    "title": "API contract registry",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "Unsupported create or update operations are rejected.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F07-006",
+    "title": "Integration error worklist",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "Permanent failures remain visible until an authorized resolution.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F07-007",
+    "title": "Callback authentication",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "Forged, stale or mismatched callbacks cannot advance workflow.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F07-008",
+    "title": "External correlation",
+    "epic": "Admin cockpit and integration foundation",
+    "priority": "P0",
+    "acceptance": "An accepted SAP object is traceable to the originating request.",
+    "screens": [
+      "P05",
+      "P21",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F08-001",
+    "title": "Adapter contract",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "Every executable adapter rejects invalid input before target access.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F08-002",
+    "title": "Read only target snapshots",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "Snapshot includes tenant, object key, observation time and provenance.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F08-003",
+    "title": "API execution worker",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "Response and persisted target state agree on the outcome.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F08-004",
+    "title": "UI runner isolation",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "A long browser job cannot hold an HTTP transaction open.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F08-005",
+    "title": "Semantic UI targeting",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "A changed label or unexpected screen stops the affected action safely.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F08-006",
+    "title": "Approved upload path",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "Generated output matches the approved target template version.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F08-007",
+    "title": "Write verification",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "A successful click without persisted change is not marked verified.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F08-008",
+    "title": "Replay and recovery test",
+    "epic": "Bounded SAP execution adapters",
+    "priority": "P0",
+    "acceptance": "Restart never duplicates the tested business side effect.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-001",
+    "title": "Deployment package manifest",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Any content change invalidates package signature.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-002",
+    "title": "Prerequisite gate engine",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Dependent actions cannot run early.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-003",
+    "title": "Target authorization",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Target mismatch blocks execution.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-004",
+    "title": "Dry-run planner",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Preview lists unsupported and attended steps.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-005",
+    "title": "Release approval gate",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Expired or revoked approval blocks dispatch.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-006",
+    "title": "Durable execution state machine",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Restart resumes from reconciled state.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-007",
+    "title": "Target locking",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Concurrent conflicting package is queued.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-008",
+    "title": "Bounded execution dispatch",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Agent cannot call arbitrary endpoints or scripts.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-009",
+    "title": "Readback reconciliation",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Success requires independently retrieved evidence.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-010",
+    "title": "Failure and unknown recovery",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Unknown writes cannot be blindly repeated.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-011",
+    "title": "Operator recovery console",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "Each recovery records actor and reason.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F12-012",
+    "title": "Deployment qualification suite",
+    "epic": "Deployment agent",
+    "priority": "P0",
+    "acceptance": "No duplicate change occurs in fault tests.",
+    "screens": [
+      "P18",
+      "P19",
+      "P20",
+      "P21"
+    ],
+    "journey": "J03"
+  },
+  {
+    "id": "F14-001",
+    "title": "ALM connector feasibility",
+    "epic": "ALM and delivery traceability",
+    "priority": "P0",
+    "acceptance": "Supported objects and permissions documented.",
+    "screens": [
+      "P05",
+      "P22",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F14-002",
+    "title": "Requirement linkage",
+    "epic": "ALM and delivery traceability",
+    "priority": "P0",
+    "acceptance": "Links are bidirectionally traceable where supported.",
+    "screens": [
+      "P05",
+      "P22",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F15-001",
+    "title": "Contract and schema tests",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "All published contracts pass positive and negative cases.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F15-002",
+    "title": "CAP authorization testing",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "Cross-client and deep-operation access attempts are denied.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F15-003",
+    "title": "UI5 journey tests",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "Review and recovery journeys pass supported viewports.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F15-004",
+    "title": "Golden agent evaluations",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "Critical grounded decisions meet agreed thresholds.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F15-005",
+    "title": "Connector fault injection",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "Timeout and replay cases preserve write safety.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F15-006",
+    "title": "Integrated vertical scenario",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "BPD to verified configuration scenario completes with evidence.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F15-007",
+    "title": "User acceptance testing",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "Business owners sign pilot acceptance and defects.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F15-008",
+    "title": "Performance and recovery tests",
+    "epic": "Product qualification and adoption",
+    "priority": "P0",
+    "acceptance": "Agreed load and restart objectives are demonstrated.",
+    "screens": [
+      "P22",
+      "P26",
+      "P24"
+    ],
+    "journey": "J04"
+  },
+  {
+    "id": "F01-007",
+    "title": "Backlog traceability",
+    "epic": "Product and project foundation",
+    "priority": "P1",
+    "acceptance": "A reviewer follows a feature to its test result without manual reconciliation.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F01-008",
+    "title": "Controlled state transitions",
+    "epic": "Product and project foundation",
+    "priority": "P1",
+    "acceptance": "An invalid transition fails with a useful reason and audit record.",
+    "screens": [
+      "P02",
+      "P04"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-003",
+    "title": "Structured extraction",
+    "epic": "Knowledge and data foundation",
+    "priority": "P1",
+    "acceptance": "A sampled requirement links to its original paragraph or table cell.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-004",
+    "title": "Canonical process taxonomy",
+    "epic": "Knowledge and data foundation",
+    "priority": "P1",
+    "acceptance": "Every imported process has an unambiguous stable identifier.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-005",
+    "title": "SAP scope catalogue",
+    "epic": "Knowledge and data foundation",
+    "priority": "P1",
+    "acceptance": "Unverified or deprecated IDs cannot be selected silently.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-006",
+    "title": "Configuration activity catalogue",
+    "epic": "Knowledge and data foundation",
+    "priority": "P1",
+    "acceptance": "Activity IDs are distinct from scope IDs and internal feature IDs.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-007",
+    "title": "Release and localization metadata",
+    "epic": "Knowledge and data foundation",
+    "priority": "P1",
+    "acceptance": "Retrieval excludes inapplicable country or superseded content.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-008",
+    "title": "Hybrid retrieval",
+    "epic": "Knowledge and data foundation",
+    "priority": "P1",
+    "acceptance": "An exact activity-ID query resolves the correct eligible record.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F04-009",
+    "title": "Evidence lineage",
+    "epic": "Knowledge and data foundation",
+    "priority": "P1",
+    "acceptance": "A proposal exposes the exact source revision used.",
+    "screens": [
+      "P06",
+      "P07",
+      "P08"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-001",
+    "title": "Structured agent contracts",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "Malformed or unsupported output is rejected before business-state changes.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-002",
+    "title": "Grounded recommendations",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "Every proposed decision has evidence or an explicit unresolved question.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-003",
+    "title": "Allowlisted agent tools",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "Agents cannot run arbitrary SQL, shell or unrestricted HTTP.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-004",
+    "title": "Model gateway",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "A disabled model endpoint cannot receive restricted project content.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-005",
+    "title": "Prompt injection defenses",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "Adversarial documents cannot alter permissions or approval rules.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-006",
+    "title": "Evaluation harness",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "Held-out expert-reviewed cases meet approved release thresholds.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-007",
+    "title": "Explainability record",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "Reviewers can understand a proposal without hidden model reasoning.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F09-008",
+    "title": "Run budgets and limits",
+    "epic": "Agent runtime and AI governance",
+    "priority": "P0",
+    "acceptance": "Exceeding a budget stops the run and preserves usable evidence.",
+    "screens": [
+      "P15",
+      "P07",
+      "P23"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F06-003",
+    "title": "Review floorplans",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P1",
+    "acceptance": "Users can filter, review and navigate without losing context.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-001",
+    "title": "Requirement normalization",
+    "epic": "Scoping agent",
+    "priority": "P0",
+    "acceptance": "Every candidate retains document version and exact source location.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-002",
+    "title": "Industry and country intake",
+    "epic": "Scoping agent",
+    "priority": "P0",
+    "acceptance": "Unknown countries block localization approval.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F06-004",
+    "title": "Current proposed comparison",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P1",
+    "acceptance": "Changed and unchanged values are distinguishable and accessible.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F06-005",
+    "title": "Organization designer",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P1",
+    "acceptance": "A reviewer can identify invalid parent-child assignments.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F06-006",
+    "title": "Agent control panel",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P1",
+    "acceptance": "The panel distinguishes planned, executing, unknown and verified states.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F06-007",
+    "title": "Accessible interactions",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P1",
+    "acceptance": "Critical tasks pass agreed accessibility and keyboard checks.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F06-008",
+    "title": "Consistent failure states",
+    "epic": "SAP Fiori workbench and experience",
+    "priority": "P1",
+    "acceptance": "Users can identify the failure cause and allowed next action.",
+    "screens": [
+      "P01",
+      "P02",
+      "P09",
+      "P11",
+      "P15"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-003",
+    "title": "Scope candidate generation",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Candidates cite catalog release and explain inclusion.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-004",
+    "title": "Scope identity validation",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Invalid or mismatched scope IDs cannot be approved.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-005",
+    "title": "Country availability checks",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Unavailable combinations raise a blocking exception.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-006",
+    "title": "Scope dependency graph",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Missing prerequisites appear before baseline approval.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-007",
+    "title": "Fit-to-standard assessment",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Each delta has rationale and business owner.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-008",
+    "title": "Scope review workbench",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Edits invalidate approvals for affected items.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-009",
+    "title": "Scope baseline approval",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Only signed baseline versions proceed to execution.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F11-001",
+    "title": "Enterprise structure intake",
+    "epic": "Organization structure agent",
+    "priority": "P0",
+    "acceptance": "No invented legal names or tax registrations enter execution.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-002",
+    "title": "Organization object schema",
+    "epic": "Organization structure agent",
+    "priority": "P0",
+    "acceptance": "Each supported object has required keys and lifecycle.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F10-010",
+    "title": "Scope activation package",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Package includes target, prerequisite checks and checksum.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-011",
+    "title": "Scoping evaluation suite",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "No fabricated scope IDs and all critical prerequisites detected.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F10-012",
+    "title": "Scoping handoff contract",
+    "epic": "Scoping agent",
+    "priority": "P1",
+    "acceptance": "Downstream agent rejects stale scope versions.",
+    "screens": [
+      "P09",
+      "P10",
+      "P17",
+      "P18"
+    ],
+    "journey": "J01"
+  },
+  {
+    "id": "F11-003",
+    "title": "Assignment graph",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Invalid or circular assignments are rejected.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-004",
+    "title": "Organization proposal",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Each recommendation explains source and assumption.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-005",
+    "title": "Country and currency validation",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Missing legal attributes block release.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-006",
+    "title": "Naming and number rules",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Duplicate target identifiers are blocked.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-007",
+    "title": "Interactive organization designer",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Changes create a new proposal version.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-008",
+    "title": "Structure impact analysis",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Affected proposals require revalidation.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-009",
+    "title": "Organization approval",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Maker cannot approve own executable package.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-010",
+    "title": "Organization execution package",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Parents and prerequisites precede dependent assignments.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-011",
+    "title": "Organization readback",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "Mismatch stops dependent configuration.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F11-012",
+    "title": "Organization evaluation suite",
+    "epic": "Organization structure agent",
+    "priority": "P1",
+    "acceptance": "All mandatory assignment errors are detected.",
+    "screens": [
+      "P11",
+      "P12",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-001",
+    "title": "Activity discovery",
+    "epic": "Configuration agent",
+    "priority": "P0",
+    "acceptance": "Activity identity is verified for release and target.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-002",
+    "title": "Configuration metadata contract",
+    "epic": "Configuration agent",
+    "priority": "P0",
+    "acceptance": "Unknown fields cannot be dispatched.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-003",
+    "title": "Organization dependency binding",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Unverified company code references are blocked.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-004",
+    "title": "Current-state snapshot",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Snapshot records target and retrieval time.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-005",
+    "title": "Requirement to value mapping",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Each value cites requirement or explicit assumption.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-006",
+    "title": "Country rule routing",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Missing country evidence routes to specialist.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-007",
+    "title": "Field and cross-field validation",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Invalid combinations fail before approval.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-008",
+    "title": "Configuration diff review",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Reviewer sees additions, updates and omissions.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-009",
+    "title": "Risk classification",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "High-risk changes require specialist approval.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-010",
+    "title": "Configuration approval",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Changed values cannot reuse previous approval.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-011",
+    "title": "Execution pathway selection",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Unsupported automation is reported as attended.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-012",
+    "title": "Configuration package handoff",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Package contains activity and requirement traceability.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-013",
+    "title": "Configuration verification",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Discrepancies block completion.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F13-014",
+    "title": "Configuration evaluation suite",
+    "epic": "Configuration agent",
+    "priority": "P1",
+    "acceptance": "Zero critical value errors in approved pilot set.",
+    "screens": [
+      "P13",
+      "P14",
+      "P17",
+      "P20"
+    ],
+    "journey": "J02"
+  },
+  {
+    "id": "F14-003",
+    "title": "Defect synchronization",
+    "epic": "ALM and delivery traceability",
+    "priority": "P1",
+    "acceptance": "Duplicate events do not create duplicate defects.",
+    "screens": [
+      "P05",
+      "P22",
+      "P23"
+    ],
+    "journey": "J05"
+  },
+  {
+    "id": "F14-004",
+    "title": "Evidence export",
+    "epic": "ALM and delivery traceability",
+    "priority": "P1",
+    "acceptance": "Bundle resolves every included requirement.",
+    "screens": [
+      "P05",
+      "P22",
+      "P23"
+    ],
+    "journey": "J05"
+  }
+]

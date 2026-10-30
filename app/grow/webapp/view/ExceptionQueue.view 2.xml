@@ -1,0 +1,76 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.ExceptionQueue"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="exceptionPage" title="Exceptions and recovery worklist" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="Recovery queue"
+          number="{exception>/total}"
+          intro="Turn failures into owned decisions with safe recovery and no hidden retry loops."
+          backgroundDesign="Solid">
+          <statuses>
+            <ObjectStatus text="{exception>/summaryStatus}" state="{exception>/summaryState}"/>
+          </statuses>
+        </ObjectHeader>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Inspect exception" press=".onInspectException"/>
+          <Button text="Assign owner" press=".onAssignOwner"/>
+          <Button text="Retry eligible operation" press=".onRetryEligibleOperation"/>
+          <Button text="Complete attended task" press=".onCompleteAttendedTask"/>
+          <Button text="Escalate" type="Emphasized" press=".onEscalate"/>
+        </Toolbar>
+
+        <MessageStrip
+          class="sapUiSmallMarginTopBottom"
+          type="{exception>/bannerType}"
+          showIcon="true"
+          text="{exception>/bannerText}"/>
+
+        <HBox width="100%" class="sapUiSmallMarginTop">
+          <VBox width="45%" class="sapUiSmallMarginEnd">
+            <Panel headerText="Exceptions" expandable="false">
+              <List id="exceptionList" items="{exception>/items}" mode="SingleSelectMaster" selectionChange=".onSelectException">
+                <StandardListItem
+                  title="{exception>category}"
+                  description="{exception>detail}"
+                  info="{exception>statusText}"
+                  infoState="{exception>statusState}"
+                  type="Active"/>
+              </List>
+            </Panel>
+          </VBox>
+
+          <VBox width="55%">
+            <Panel headerText="Selected exception details">
+              <VBox class="sapUiSmallMargin">
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Category"/>
+                  <ObjectStatus text="{exception>/selected/category}" state="{exception>/selected/categoryState}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Affected gate"/>
+                  <Text text="{exception>/selected/gate}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Owner"/>
+                  <Text text="{exception>/selected/owner}"/>
+                </HBox>
+                <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
+                  <Text text="Sanitized evidence"/>
+                  <Text text="{exception>/selected/evidence}"/>
+                </HBox>
+                <Text text="Instructions" class="sapUiTinyMarginTop"/>
+                <Text text="{exception>/selected/instructions}"/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

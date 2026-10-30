@@ -1,0 +1,39 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.ProjectPhaseOverview"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:layout="sap.ui.layout"
+  displayBlock="true">
+  <Page id="phaseOverviewPage" title="Seven-Phase Transformation Roadmap" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <Title text="Program execution across seven phases" level="H1"/>
+
+        <HBox class="sapUiMediumMarginTop" width="100%">
+          <VBox width="50%" class="sapUiSmallMarginEnd">
+            <Panel headerText="Phase status map">
+              <List>
+                <StandardListItem title="1. Discover" description="Strategy and business context defined" info="Complete" infoState="Success"/>
+                <StandardListItem title="2. Prepare" description="Ownership, setup, and readiness controls active" info="Complete" infoState="Success"/>
+                <StandardListItem title="3. Integrate" description="System and data connectivity aligned" info="Complete" infoState="Success"/>
+                <StandardListItem title="4. Scope" description="Requirements and process fit mapped" info="Active" infoState="Information"/>
+                <StandardListItem title="5. Configure" description="Value changes and dependency checks under review" info="Active" infoState="Information"/>
+                <StandardListItem title="6. Deploy" description="Run control, verification, and reconciliation" info="Watch" infoState="Warning"/>
+                <StandardListItem title="7. Validate" description="Evidence, pilot handover and quality gate" info="Watch" infoState="Warning"/>
+              </List>
+            </Panel>
+          </VBox>
+
+          <VBox width="50%">
+            <Panel headerText="Leadership summary">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The program is in a healthy transition from governance design into controlled execution. The most material lever is to maintain rigor in the last three phases: configuration validation, deployment verification, and evidence-backed quality closure."/>
+                <Text class="sapUiTinyMarginTop" text="This keeps business transformation benefits protected while preserving operational confidence and explicit control."/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

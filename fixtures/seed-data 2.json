@@ -1,0 +1,121 @@
+{
+  "seedVersion": "2026-10-30",
+  "generatedAt": "2026-10-30T00:00:00Z",
+  "synthetic": true,
+  "label": "Synthetic fixture catalog for GROW Automation demo and access tests; not verified SAP or client data",
+  "userKey": "demo-user",
+  "workspaceKey": "grow-demo",
+  "projects": [
+    {
+      "id": "P-DEMO-001",
+      "client": "NORTHSTAR",
+      "name": "Northstar Public Cloud Transformation",
+      "status": "Ready",
+      "projectKey": "NORTHSTAR-PILOT",
+      "owner": "demo.delivery.lead",
+      "targetSystem": "S4-PILOT",
+      "countrySet": ["IN", "DE", "US", "GB", "SG"]
+    },
+    {
+      "id": "P-DEMO-002",
+      "client": "RESTRICTED",
+      "name": "Restricted Org Control Sandbox",
+      "status": "Review",
+      "projectKey": "RESTRICTED-ORG",
+      "owner": "demo.restricted.owner",
+      "targetSystem": "S4-RESTRICTED",
+      "countrySet": ["IN"]
+    }
+  ],
+  "legalEntities": [
+    { "id": "LE-001", "country": "IN", "companyCode": "1000", "currency": "INR", "name": "Northstar India Manufacturing Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-002", "country": "IN", "companyCode": "1010", "currency": "INR", "name": "Northstar India Services Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-003", "country": "DE", "companyCode": "2000", "currency": "EUR", "name": "Northstar Germany Manufacturing Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-004", "country": "DE", "companyCode": "2010", "currency": "EUR", "name": "Northstar Germany Services Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-005", "country": "US", "companyCode": "3000", "currency": "USD", "name": "Northstar US Manufacturing Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-006", "country": "US", "companyCode": "3010", "currency": "USD", "name": "Northstar US Services Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-007", "country": "GB", "companyCode": "4000", "currency": "GBP", "name": "Northstar UK Manufacturing Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-008", "country": "GB", "companyCode": "4010", "currency": "GBP", "name": "Northstar UK Services Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-009", "country": "SG", "companyCode": "5000", "currency": "SGD", "name": "Northstar Singapore Manufacturing Demo", "projectId": "P-DEMO-001" },
+    { "id": "LE-010", "country": "SG", "companyCode": "5010", "currency": "SGD", "name": "Northstar Singapore Services Demo", "projectId": "P-DEMO-001" }
+  ],
+  "organizationAssignments": [
+    { "id": "OA-001", "projectId": "P-DEMO-001", "legalEntityId": "LE-001", "nodeType": "CompanyCode", "resourceKey": "R-DEL-01", "roleName": "Delivery Lead" },
+    { "id": "OA-002", "projectId": "P-DEMO-001", "legalEntityId": "LE-003", "nodeType": "CompanyCode", "resourceKey": "R-FIN-01", "roleName": "Finance Approver" },
+    { "id": "OA-003", "projectId": "P-DEMO-001", "legalEntityId": "LE-005", "nodeType": "CompanyCode", "resourceKey": "R-REL-01", "roleName": "Release Manager" },
+    { "id": "OA-004", "projectId": "P-DEMO-001", "legalEntityId": "LE-007", "nodeType": "CompanyCode", "resourceKey": "R-AUD-01", "roleName": "Auditor" },
+    { "id": "OA-005", "projectId": "P-DEMO-002", "legalEntityId": "LE-001", "nodeType": "CompanyCode", "resourceKey": "R-RES-01", "roleName": "Restricted Org User" },
+    { "id": "OA-006", "projectId": "P-DEMO-002", "legalEntityId": "LE-002", "nodeType": "CompanyCode", "resourceKey": "R-FIN-02", "roleName": "Finance Approver" }
+  ],
+  "scopeCandidates": [
+    { "id": "DEMO-SCOPE-01", "concept": "Supplier creation and maintenance", "requirementId": "BR-03-001", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-02", "concept": "Quotation requests and offer comparison", "requirementId": "BR-03-002", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-03", "concept": "Purchasing contracts and negotiated prices", "requirementId": "BR-03-003", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-04", "concept": "Approved sources of supply", "requirementId": "BR-03-004", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-05", "concept": "Raw material and component purchases", "requirementId": "BR-03-005", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-06", "concept": "Requisition and purchase order approvals", "requirementId": "BR-03-009", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-07", "concept": "Goods receipt against purchase orders", "requirementId": "BR-03-010", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-08", "concept": "Invoice matching and verification", "requirementId": "BR-03-011", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-09", "concept": "Operating and group charts of accounts", "requirementId": "BR-12-001", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-10", "concept": "Journals accruals and recurring entries", "requirementId": "BR-12-002", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-11", "concept": "Supplier liabilities and payments", "requirementId": "BR-12-003", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-12", "concept": "Customer receipts collections and overdue balances", "requirementId": "BR-12-004", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-13", "concept": "Bank statement reconciliation", "requirementId": "BR-12-005", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-14", "concept": "Cost centers and profit centers", "requirementId": "BR-12-008", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-15", "concept": "Foreign currency valuation and period end adjustments", "requirementId": "BR-12-014", "projectId": "P-DEMO-001" },
+    { "id": "DEMO-SCOPE-16", "concept": "Entity financial statements", "requirementId": "BR-12-015", "projectId": "P-DEMO-001" }
+  ],
+  "configurationActivities": [
+    { "id": "DEMO-CA-01", "title": "Payment terms", "br": "BR-12-003", "projectId": "P-DEMO-001", "legalEntityId": "LE-001", "pathway": "attended", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-02", "title": "Purchase approval thresholds", "br": "BR-03-009", "projectId": "P-DEMO-001", "legalEntityId": "LE-002", "pathway": "API simulation", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-03", "title": "Invoice tolerance", "br": "BR-03-011", "projectId": "P-DEMO-001", "legalEntityId": "LE-003", "pathway": "blocked", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-04", "title": "Bank account mapping", "br": "BR-12-005", "projectId": "P-DEMO-001", "legalEntityId": "LE-004", "pathway": "allowed", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-05", "title": "Cost center validation", "br": "BR-12-008", "projectId": "P-DEMO-001", "legalEntityId": "LE-005", "pathway": "attended", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-06", "title": "Currency valuation", "br": "BR-12-014", "projectId": "P-DEMO-001", "legalEntityId": "LE-006", "pathway": "API simulation", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-07", "title": "Supplier liability terms", "br": "BR-12-003", "projectId": "P-DEMO-001", "legalEntityId": "LE-007", "pathway": "blocked", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-08", "title": "Journal review threshold", "br": "BR-12-002", "projectId": "P-DEMO-001", "legalEntityId": "LE-008", "pathway": "allowed", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-09", "title": "Requisition approval matrix", "br": "BR-03-009", "projectId": "P-DEMO-001", "legalEntityId": "LE-009", "pathway": "attended", "policyId": "DEMO-POLICY-001" },
+    { "id": "DEMO-CA-10", "title": "Statement reconciliation rules", "br": "BR-12-005", "projectId": "P-DEMO-001", "legalEntityId": "LE-010", "pathway": "API simulation", "policyId": "DEMO-POLICY-001" }
+  ],
+  "policySource": {
+    "id": "DEMO-POLICY-001",
+    "status": "Synthetic assumption, not client-approved",
+    "text": "Illustrative pilot uses 45 payment days, two approval levels, INR 10000 purchase approval threshold, 2 percent invoice tolerance and INR 50000 journal review threshold. These values demonstrate review and validation only."
+  },
+  "proposals": [
+    { "id": "PROP-001", "projectId": "P-DEMO-001", "status": "Pending", "revision": 1, "owner": "demo.delivery.lead", "targetId": "S4-PILOT" },
+    { "id": "PROP-002", "projectId": "P-DEMO-001", "status": "Approved", "revision": 2, "owner": "demo.delivery.lead", "targetId": "S4-PILOT" },
+    { "id": "PROP-003", "projectId": "P-DEMO-001", "status": "Returned", "revision": 3, "owner": "demo.finance.approver", "targetId": "S4-PILOT" },
+    { "id": "PROP-004", "projectId": "P-DEMO-001", "status": "Rejected", "revision": 4, "owner": "demo.release.manager", "targetId": "S4-PILOT" },
+    { "id": "PROP-005", "projectId": "P-DEMO-001", "status": "Stale", "revision": 5, "owner": "demo.auditor", "targetId": "S4-PILOT" },
+    { "id": "PROP-006", "projectId": "P-DEMO-002", "status": "Pending", "revision": 1, "owner": "demo.restricted.owner", "targetId": "S4-RESTRICTED" }
+  ],
+  "approvals": [
+    { "id": "APP-001", "projectId": "P-DEMO-001", "proposalId": "PROP-001", "approver": "demo.finance.approver", "status": "Pending", "expiresAt": "2026-11-06T12:00:00Z" },
+    { "id": "APP-002", "projectId": "P-DEMO-001", "proposalId": "PROP-002", "approver": "demo.release.manager", "status": "Approved", "expiresAt": "2026-11-02T12:00:00Z" },
+    { "id": "APP-003", "projectId": "P-DEMO-001", "proposalId": "PROP-003", "approver": "demo.finance.approver", "status": "Returned", "expiresAt": "2026-11-04T12:00:00Z" },
+    { "id": "APP-004", "projectId": "P-DEMO-001", "proposalId": "PROP-004", "approver": "demo.release.manager", "status": "Rejected", "expiresAt": "2026-10-30T12:00:00Z" },
+    { "id": "APP-005", "projectId": "P-DEMO-001", "proposalId": "PROP-005", "approver": "demo.auditor", "status": "Stale", "expiresAt": "2026-10-25T12:00:00Z" }
+  ],
+  "integrationFaults": [
+    { "id": "INT-001", "projectId": "P-DEMO-001", "kind": "SAP-API", "status": "Pending", "message": "Authentication token expired for CBC connection simulation" },
+    { "id": "INT-002", "projectId": "P-DEMO-001", "kind": "S4HANA", "status": "Failed", "message": "Target mapping mismatch in pricing condition group" },
+    { "id": "INT-003", "projectId": "P-DEMO-002", "kind": "LeanIX", "status": "Unknown", "message": "Restricted organization override blocks deep read" }
+  ],
+  "observations": [
+    { "id": "OBS-001", "projectId": "P-DEMO-001", "actionId": "ACT-001", "kind": "Deployment", "code": "TARGET-RECONCILE", "message": "Pending reconciliation after package validation" },
+    { "id": "OBS-002", "projectId": "P-DEMO-001", "actionId": "ACT-002", "kind": "Log", "code": "VALIDATION-OK", "message": "Approved by finance and release controls" },
+    { "id": "OBS-003", "projectId": "P-DEMO-002", "actionId": "ACT-003", "kind": "Access", "code": "DENIED", "message": "Restricted workspace denied deep organization read" }
+  ],
+  "conversations": [
+    { "id": "CONV-001", "projectId": "P-DEMO-001", "createdBy": "demo.delivery.lead", "scope": "Project", "message": "The initial pilot scenario is ready for finance and release review." },
+    { "id": "CONV-002", "projectId": "P-DEMO-001", "createdBy": "demo.finance.approver", "scope": "Approval", "message": "Payment term policy must be validated before broad release." },
+    { "id": "CONV-003", "projectId": "P-DEMO-002", "createdBy": "demo.restricted.owner", "scope": "Access", "message": "Restrict this workspace to approved organization nodes only." }
+  ],
+  "mutableState": {
+    "selectedProjectId": "P-DEMO-001",
+    "selectedScopeId": "DEMO-SCOPE-06",
+    "selectedActivityId": "DEMO-CA-02",
+    "lastResetAt": null
+  }
+}

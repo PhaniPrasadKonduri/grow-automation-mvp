@@ -1,0 +1,49 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.DeploymentPackage"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="deploymentPackagePage" title="Deployment package and dry run" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="{package>/packageName}"
+          number="{package>/packageId}"
+          intro="Package preparation, release authorization and execution readiness are separated to preserve approval and target checks."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Build package" press=".onBuildPackage"/>
+          <Button text="Dry run" press=".onDryRun"/>
+          <Button text="Review blockers" press=".onReviewBlockers"/>
+          <Button text="Request release authorization" press=".onRequestReleaseAuthorization"/>
+          <Button text="Execute simulation" type="Emphasized" press=".onExecuteSimulation"/>
+        </Toolbar>
+
+        <Panel headerText="Manifest" class="sapUiSmallMarginTop">
+          <content>
+            <Table items="{package>/items}">
+              <columns>
+                <Column width="180px"><Text text="Action key"/></Column>
+                <Column width="200px"><Text text="Target"/></Column>
+                <Column width="180px"><Text text="Stable"/></Column>
+                <Column><Text text="Status"/></Column>
+              </columns>
+              <items>
+                <ColumnListItem>
+                  <cells>
+                    <Text text="{package>actionKey}"/>
+                    <Text text="{package>target}"/>
+                    <ObjectStatus text="{package>stable}" state="{package>state}"/>
+                    <Text text="{package>status}"/>
+                  </cells>
+                </ColumnListItem>
+              </items>
+            </Table>
+          </content>
+        </Panel>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>

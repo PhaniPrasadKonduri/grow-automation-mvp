@@ -1,0 +1,52 @@
+<mvc:View
+  controllerName="com.ey.grow.prototype.controller.EvidenceAuditExplorer"
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  xmlns:core="sap.ui.core"
+  displayBlock="true">
+  <Page id="evidencePage" title="Evidence and audit explorer" showNavButton="true" navButtonPress=".onBack">
+    <content>
+      <VBox class="sapUiSmallMargin" width="100%">
+        <ObjectHeader
+          title="Audit ledger"
+          number="{audit>/count}"
+          intro="Every decision and simulated privileged attempt remains traceable from source through outcome."
+          backgroundDesign="Solid"/>
+
+        <Toolbar class="sapUiTinyMarginTop">
+          <Button text="Search audit" press=".onSearchAudit"/>
+          <Button text="Open lineage" press=".onOpenLineage"/>
+          <Button text="Inspect redaction" press=".onInspectRedaction"/>
+          <Button text="Export bundle" type="Emphasized" press=".onExportBundle"/>
+        </Toolbar>
+
+        <MessageStrip
+          class="sapUiSmallMarginTopBottom"
+          type="{audit>/bannerType}"
+          showIcon="true"
+          text="{audit>/bannerText}"/>
+
+        <Table id="auditTable" items="{audit>/events}" mode="SingleSelectMaster" selectionChange=".onSelectEvent">
+          <columns>
+            <Column width="180px"><Text text="Actor"/></Column>
+            <Column width="170px"><Text text="Time"/></Column>
+            <Column width="180px"><Text text="Artifact"/></Column>
+            <Column width="150px"><Text text="Correlation"/></Column>
+            <Column><Text text="Status"/></Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{audit>actor}"/>
+                <Text text="{audit>time}"/>
+                <Text text="{audit>artifact}"/>
+                <Text text="{audit>correlation}"/>
+                <ObjectStatus text="{audit>status}" state="{audit>statusState}"/>
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </VBox>
+    </content>
+  </Page>
+</mvc:View>
