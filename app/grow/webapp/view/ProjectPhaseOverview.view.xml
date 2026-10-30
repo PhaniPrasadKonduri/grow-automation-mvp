@@ -4,13 +4,13 @@
   xmlns="sap.m"
   xmlns:layout="sap.ui.layout"
   displayBlock="true">
-  <Page id="phaseOverviewPage" title="Seven-Phase Transformation Roadmap" showNavButton="true" navButtonPress=".onBack">
+  <Page id="phaseOverviewPage" title="Seven-Phase Transformation Roadmap" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
         <Title text="Program execution across seven phases" level="H1"/>
 
         <HBox class="sapUiMediumMarginTop" width="100%">
-          <VBox width="50%" class="sapUiSmallMarginEnd">
+          <VBox width="50%" class="sapUiSmallMarginEnd boardroom-panel">
             <Panel headerText="Phase status map">
               <List>
                 <StandardListItem title="1. Discover" description="Strategy and business context defined" info="Complete" infoState="Success"/>
@@ -24,7 +24,7 @@
             </Panel>
           </VBox>
 
-          <VBox width="50%">
+          <VBox width="50%" class="boardroom-panel">
             <Panel headerText="Leadership summary">
               <VBox class="sapUiSmallMargin">
                 <Text text="The program is in a healthy transition from governance design into controlled execution. The most material lever is to maintain rigor in the last three phases: configuration validation, deployment verification, and evidence-backed quality closure."/>

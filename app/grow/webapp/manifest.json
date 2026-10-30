@@ -32,7 +32,8 @@
         "sap.ui.layout": {},
         "sap.f": {},
         "sap.ui.unified": {},
-        "sap.uxap": {}
+        "sap.uxap": {},
+        "sap.suite.ui.microchart": {}
       }
     },
     "models": {

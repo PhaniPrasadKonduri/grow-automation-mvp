@@ -2,11 +2,10 @@
   controllerName="com.ey.grow.prototype.controller.DocumentIntake"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
-  xmlns:core="sap.ui.core"
   displayBlock="true">
-  <Page id="documentIntakePage" title="TO BE document intake" showNavButton="true" navButtonPress=".onBack">
+  <Page id="documentIntakePage" title="TO BE document intake" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
         <ObjectHeader
           title="{project>/projectName}"
           number="{project>/projectId}"
@@ -21,17 +20,29 @@
           <Button text="Review requirements" type="Emphasized" press=".onReviewRequirements"/>
         </Toolbar>
 
-        <Panel headerText="Upload status" class="sapUiSmallMarginTop" expandable="true">
-          <content>
-            <HBox alignItems="Center">
-              <Label text="Status" class="sapUiSmallMarginEnd"/>
-              <ObjectStatus text="{document>/status}" state="{document>/state}"/>
-            </HBox>
-            <ProgressIndicator percentValue="{document>/progress}" displayValue="{document>/progress}%" class="sapUiSmallMarginTop"/>
-          </content>
-        </Panel>
+        <HBox width="100%" class="sapUiMediumMarginTop">
+          <VBox width="45%" class="sapUiSmallMarginEnd boardroom-panel">
+            <Panel headerText="Upload status" expandable="true">
+              <content>
+                <HBox alignItems="Center">
+                  <Label text="Status" class="sapUiSmallMarginEnd"/>
+                  <ObjectStatus text="{document>/status}" state="{document>/state}"/>
+                </HBox>
+                <ProgressIndicator percentValue="{document>/progress}" displayValue="{document>/progress}%" class="sapUiSmallMarginTop"/>
+              </content>
+            </Panel>
+          </VBox>
 
-        <Table id="documentTable" items="{document>/revisions}" class="sapUiSmallMarginTop">
+          <VBox width="55%" class="boardroom-panel">
+            <Panel headerText="Source confidence">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The source baseline is stable, traceable, and suitable for requirement normalization. The remaining warning indicates a low-risk interpretation issue that still requires validation before approval."/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
+
+        <Table id="documentTable" items="{document>/revisions}" class="sapUiSmallMarginTop boardroom-panel">
           <columns>
             <Column width="190px"><Text text="Revision"/></Column>
             <Column width="220px"><Text text="Source"/></Column>

@@ -4,34 +4,34 @@
   xmlns="sap.m"
   xmlns:layout="sap.ui.layout"
   displayBlock="true">
-  <Page id="valueDashboardPage" title="Value and Impact" showNavButton="true" navButtonPress=".onBack">
+  <Page id="valueDashboardPage" title="Value and Impact" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
-        <Title text="Business value and strategic impact" level="H1"/>
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
+        <Title text="Business value and strategic impact" level="H1" class="sapUiTinyMarginBottom"/>
 
         <layout:ResponsiveFlowLayout class="sapUiMediumMarginTop">
-          <VBox class="sapUiSmallMarginEnd" width="24%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="24%">
             <GenericTile header="Manual effort saved" subheader="42% reduction">
               <TileContent>
                 <NumericContent value="42" scale="%" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox class="sapUiSmallMarginEnd" width="24%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="24%">
             <GenericTile header="Rework avoided" subheader="18.4 hours">
               <TileContent>
                 <NumericContent value="18.4" scale="h" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox class="sapUiSmallMarginEnd" width="24%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="24%">
             <GenericTile header="Time to value" subheader="-31 days">
               <TileContent>
                 <NumericContent value="31" scale="d" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox width="24%">
+          <VBox width="24%" class="boardroom-kpi">
             <GenericTile header="Executive confidence" subheader="High">
               <TileContent>
                 <NumericContent value="92" scale="%" valueColor="Good"/>
@@ -41,7 +41,7 @@
         </layout:ResponsiveFlowLayout>
 
         <HBox width="100%" class="sapUiMediumMarginTop">
-          <VBox width="60%" class="sapUiSmallMarginEnd">
+          <VBox width="60%" class="sapUiSmallMarginEnd boardroom-panel">
             <Panel headerText="Value narrative">
               <VBox class="sapUiSmallMargin">
                 <Text text="The transformation model reduces coordination overhead, codifies business rules, and standardizes deployment readiness checks. This enables a faster, more reliable transition to operating modes with less rework and clearer accountability."/>
@@ -50,7 +50,7 @@
             </Panel>
           </VBox>
 
-          <VBox width="40%">
+          <VBox width="40%" class="boardroom-panel">
             <Panel headerText="Impact levers">
               <List>
                 <StandardListItem title="Fewer manual reviews" description="Operational effort reduced by 42%"/>

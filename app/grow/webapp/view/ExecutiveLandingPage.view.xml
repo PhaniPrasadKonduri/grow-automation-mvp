@@ -3,12 +3,12 @@
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
   xmlns:layout="sap.ui.layout"
-  xmlns:viz="sap.viz.ui5"
+  xmlns:micro="sap.suite.ui.microchart"
   displayBlock="true">
-  <Page id="executiveLandingPage" title="Executive Transformation Command Center" showNavButton="false">
+  <Page id="executiveLandingPage" title="Executive Transformation Command Center" showNavButton="false" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
-        <HBox justifyContent="SpaceBetween" alignItems="Center" class="sapUiTinyMarginBottom">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
+        <HBox justifyContent="SpaceBetween" alignItems="Center" class="boardroom-hero sapUiTinyMarginBottom">
           <VBox>
             <Title text="Finance Transformation Office" level="H1"/>
             <Text text="Board-ready transformation command center" class="sapUiTinyMarginTop"/>
@@ -17,39 +17,40 @@
             <Button text="Program health" type="Emphasized" press=".onProgramHealth"/>
             <Button text="7-phase roadmap" class="sapUiSmallMarginBegin" press=".onPhaseRoadmap"/>
             <Button text="Value story" class="sapUiSmallMarginBegin" press=".onValueStory"/>
+            <Button text="Risk board" class="sapUiSmallMarginBegin" press=".onRiskBoard"/>
           </HBox>
         </HBox>
 
-        <layout:ResponsiveFlowLayout>
-          <VBox width="19%" class="sapUiSmallMarginEnd">
+        <layout:ResponsiveFlowLayout class="sapUiMediumMarginBottom">
+          <VBox width="19%" class="sapUiSmallMarginEnd boardroom-kpi">
             <GenericTile header="Program health" subheader="82% ready" press=".onProgramHealth">
               <TileContent>
                 <NumericContent value="82" scale="%" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox width="19%" class="sapUiSmallMarginEnd">
+          <VBox width="19%" class="sapUiSmallMarginEnd boardroom-kpi">
             <GenericTile header="Value impact" subheader="$4.2M" press=".onValueStory">
               <TileContent>
                 <NumericContent value="4.2" scale="M" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox width="19%" class="sapUiSmallMarginEnd">
+          <VBox width="19%" class="sapUiSmallMarginEnd boardroom-kpi">
             <GenericTile header="Risk posture" subheader="Low-medium" press=".onRiskBoard">
               <TileContent>
                 <NumericContent value="12" scale="%" valueColor="Critical"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox width="19%" class="sapUiSmallMarginEnd">
+          <VBox width="19%" class="sapUiSmallMarginEnd boardroom-kpi">
             <GenericTile header="Deployment certainty" subheader="94%" press=".onPhaseRoadmap">
               <TileContent>
                 <NumericContent value="94" scale="%" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox width="19%">
+          <VBox width="19%" class="boardroom-kpi">
             <GenericTile header="Governance coverage" subheader="96%" press=".onRiskBoard">
               <TileContent>
                 <NumericContent value="96" scale="%" valueColor="Good"/>
@@ -59,7 +60,7 @@
         </layout:ResponsiveFlowLayout>
 
         <HBox width="100%" class="sapUiMediumMarginTop">
-          <VBox width="65%" class="sapUiSmallMarginEnd">
+          <VBox width="65%" class="sapUiSmallMarginEnd boardroom-panel">
             <Panel headerText="Transformation progress by phase" class="sapUiTinyMarginBottom">
               <VBox class="sapUiSmallMargin">
                 <ProgressIndicator percentValue="92" displayValue="Prepare &amp; scope" state="Success"/>
@@ -72,11 +73,11 @@
             </Panel>
           </VBox>
 
-          <VBox width="35%">
+          <VBox width="35%" class="boardroom-panel">
             <Panel headerText="Board decisions today">
               <List>
                 <StandardListItem title="Approve staged go-live" description="Release readiness remains within tolerance"/>
-                <StandardListItem title="Confirm support model" description="Only 2 operational tasks open"/>
+                <StandardListItem title="Confirm support model" description="Operational ownership confirmed for the final wave"/>
                 <StandardListItem title="Align executive sponsor" description="One final governance approval pending"/>
               </List>
             </Panel>
@@ -84,9 +85,9 @@
         </HBox>
 
         <HBox width="100%" class="sapUiMediumMarginTop">
-          <VBox width="50%" class="sapUiSmallMarginEnd">
+          <VBox width="50%" class="sapUiSmallMarginEnd boardroom-panel">
             <Panel headerText="Seven-phase transformation roadmap">
-              <List>
+              <List class="boardroom-compact">
                 <StandardListItem title="Phase 1: Discover" description="Business goals and architecture fit confirmed" info="Complete" infoState="Success"/>
                 <StandardListItem title="Phase 2: Prepare" description="Project setup and ownership aligned" info="Complete" infoState="Success"/>
                 <StandardListItem title="Phase 3: Integrate" description="Systems and documents readiness validated" info="Complete" infoState="Success"/>
@@ -98,11 +99,12 @@
             </Panel>
           </VBox>
 
-          <VBox width="50%">
+          <VBox width="50%" class="boardroom-focus">
             <Panel headerText="Leadership narrative">
               <VBox class="sapUiSmallMargin">
-                <Text text="The program is progressing with strong governance discipline, measurable value capture, and controlled execution risk. The remaining work is concentrated in configuration, deployment verification, and evidence finalization — the areas where disciplined review creates the most strategic protection."/>
-                <Text class="sapUiTinyMarginTop" text="The platform is now demonstrating a credible operating model for secure, traceable, and business-aligned automation."/>
+                <Text text="The program is progressing with strong governance discipline, measurable value capture, and controlled execution risk. The remaining work is concentrated in configuration, deployment verification, and evidence finalization - the areas where disciplined review creates the most strategic protection."/>
+                <Text class="sapUiTinyMarginTop" text="The platform is demonstrating a credible operating model for secure, traceable, and business-aligned automation."/>
+                <micro:RadialMicroChart percentage="82" size="M" class="sapUiTinyMarginTop"/>
               </VBox>
             </Panel>
           </VBox>

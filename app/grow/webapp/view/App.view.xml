@@ -2,8 +2,42 @@
   controllerName="com.ey.grow.prototype.controller.App"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
+  xmlns:core="sap.ui.core"
   displayBlock="true">
-  <Shell>
+  <Shell id="growShell" appWidthLimited="false" backgroundColor="transparent">
+    <customHeader>
+      <Bar id="growShellBar" class="grow-shell-bar">
+        <contentLeft>
+          <HBox alignItems="Center" class="grow-shell-brand">
+            <core:Icon src="sap-icon://briefcase" size="1.2rem" color="#ffffff"/>
+            <Title text="GROW Automation" level="H3" class="grow-shell-title"/>
+          </HBox>
+        </contentLeft>
+        <contentMiddle>
+          <HBox alignItems="Center" class="grow-shell-navigation">
+            <Button text="Home" type="Transparent" press=".onHome" class="grow-shell-action"/>
+            <Button text="Phases" type="Transparent" press=".onPhaseOverview" class="grow-shell-action"/>
+            <Button text="Value" type="Transparent" press=".onValueBoard" class="grow-shell-action"/>
+            <Button text="Risk" type="Transparent" press=".onRiskBoard" class="grow-shell-action"/>
+            <Button text="Readiness" type="Transparent" press=".onReadinessBoard" class="grow-shell-action"/>
+          </HBox>
+        </contentMiddle>
+        <contentRight>
+          <HBox alignItems="Center" class="grow-shell-context">
+            <VBox class="grow-context-block">
+              <Text text="Project" class="grow-context-label"/>
+              <Text text="NORTHSTAR-DEMO" class="grow-context-value"/>
+            </VBox>
+            <VBox class="grow-context-block">
+              <Text text="Persona" class="grow-context-label"/>
+              <Text text="Delivery Lead" class="grow-context-value"/>
+            </VBox>
+            <Button icon="sap-icon://search" type="Transparent" tooltip="Global search"/>
+            <Button icon="sap-icon://bell" type="Transparent" tooltip="Notifications"/>
+          </HBox>
+        </contentRight>
+      </Bar>
+    </customHeader>
     <App id="app" />
   </Shell>
 </mvc:View>

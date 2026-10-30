@@ -4,45 +4,71 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
   displayBlock="true">
-  <Page title="Demo entry and role context" showHeader="true">
+  <Page title="Demo entry and role context" showHeader="true" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%" alignItems="Stretch">
-        <Title text="GROW demo entry" level="H1"/>
-        <Text text="Choose a seeded persona, a scenario and confirm the starting state before entering the guided journey."/>
-
-        <HBox class="sapUiTinyMarginTop" alignItems="Center">
-          <Label text="Persona" class="sapUiSmallMarginEnd" width="120px"/>
-          <Select id="personaSelect" width="300px">
-            <core:Item key="sponsor" text="Sponsor"/>
-            <core:Item key="deliveryLead" text="Delivery Lead"/>
-            <core:Item key="analyst" text="Analyst"/>
-            <core:Item key="functionalConsultant" text="Functional Consultant"/>
-            <core:Item key="configurationConsultant" text="Configuration Consultant"/>
-            <core:Item key="financeApprover" text="Finance Approver"/>
-            <core:Item key="releaseManager" text="Release Manager"/>
-          </Select>
-        </HBox>
-
-        <HBox class="sapUiTinyMarginTop" alignItems="Center">
-          <Label text="Scenario" class="sapUiSmallMarginEnd" width="120px"/>
-          <Select id="scenarioSelect" width="300px">
-            <core:Item key="happy-path" text="Happy path"/>
-            <core:Item key="exception" text="Exception path"/>
-          </Select>
-        </HBox>
-
-        <HBox class="sapUiTinyMarginTop">
-          <Button id="startTourBtn" type="Emphasized" text="Start guided tour" press=".onStartTour"/>
-          <Button id="resetBtn" text="Reset scenario" class="sapUiSmallMarginBegin" press=".onResetScenario"/>
-        </HBox>
-
-        <Panel headerText="Selected context" class="sapUiSmallMarginTop">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
+        <HBox class="boardroom-hero sapUiTinyMarginBottom" justifyContent="SpaceBetween" alignItems="Center">
           <VBox>
-            <Text id="selectedPersonaText" text="Selected persona: Sponsor"/>
-            <Text id="selectedScenarioText" text="Selected scenario: Happy path"/>
-            <Text id="contextSummaryText" text="This demo keeps the project and policy context local to the synthetic GROW workspace."/>
+            <Title text="GROW demo entry" level="H1"/>
+            <Text text="Select the persona, project and scenario that define the synthetic operating context for this leadership demo." class="sapUiTinyMarginTop"/>
           </VBox>
-        </Panel>
+          <Button id="startTourBtn" type="Emphasized" text="Start guided tour" press=".onStartTour"/>
+        </HBox>
+
+        <HBox width="100%" class="sapUiMediumMarginBottom">
+          <VBox width="50%" class="sapUiSmallMarginEnd boardroom-panel">
+            <Panel headerText="Session context" class="sapUiSmallMarginBottom">
+              <VBox class="sapUiSmallMargin">
+                <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                  <Label text="Persona" width="140px"/>
+                  <Select id="personaSelect" width="300px">
+                    <core:Item key="sponsor" text="Sponsor"/>
+                    <core:Item key="deliveryLead" text="Delivery Lead"/>
+                    <core:Item key="analyst" text="Analyst"/>
+                    <core:Item key="functionalConsultant" text="Functional Consultant"/>
+                    <core:Item key="configurationConsultant" text="Configuration Consultant"/>
+                    <core:Item key="financeApprover" text="Finance Approver"/>
+                    <core:Item key="releaseManager" text="Release Manager"/>
+                  </Select>
+                </HBox>
+
+                <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                  <Label text="Project" width="140px"/>
+                  <Select width="300px" selectedKey="NORTHSTAR-DEMO">
+                    <core:Item key="NORTHSTAR-DEMO" text="NORTHSTAR-DEMO"/>
+                    <core:Item key="NORTHSTAR-OPS" text="NORTHSTAR-OPS"/>
+                  </Select>
+                </HBox>
+
+                <HBox alignItems="Center" class="sapUiTinyMarginBottom">
+                  <Label text="Scenario" width="140px"/>
+                  <Select id="scenarioSelect" width="300px">
+                    <core:Item key="happy-path" text="Happy path"/>
+                    <core:Item key="exception" text="Exception path"/>
+                  </Select>
+                </HBox>
+
+                <HBox class="sapUiTinyMarginTop">
+                  <Button text="Reset scenario" press=".onResetScenario"/>
+                </HBox>
+              </VBox>
+            </Panel>
+          </VBox>
+
+          <VBox width="50%" class="boardroom-panel">
+            <Panel headerText="Selected context summary">
+              <VBox class="sapUiSmallMargin">
+                <Text id="selectedPersonaText" text="Selected persona: Sponsor" class="sapUiTinyMarginBottom"/>
+                <Text id="selectedScenarioText" text="Selected scenario: Happy path" class="sapUiTinyMarginBottom"/>
+                <Text id="contextSummaryText" text="This scenario starts from the approved baseline and demonstrates the standard leadership operating flow."/>
+                <MessageStrip
+                  text="Role and project scope are intentionally synthetic and remain within the demo’s access boundaries."
+                  type="Information"
+                  class="sapUiTinyMarginTop"/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
       </VBox>
     </content>
   </Page>

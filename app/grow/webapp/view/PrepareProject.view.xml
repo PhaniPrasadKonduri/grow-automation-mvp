@@ -4,9 +4,9 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
   displayBlock="true">
-  <Page id="preparePage" title="Prepare and project setup" showNavButton="true" navButtonPress=".onBack">
+  <Page id="preparePage" title="Prepare and project setup" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
         <ObjectHeader
           title="{project>/projectName}"
           number="{project>/projectId}"
@@ -36,7 +36,28 @@
           <Button text="Readiness check" type="Emphasized" press=".onReadinessCheck"/>
         </Toolbar>
 
-        <Table items="{project>/legalEntities}" headerText="Legal entities" class="sapUiTinyMarginTop">
+        <HBox width="100%" class="sapUiMediumMarginTop">
+          <VBox width="65%" class="sapUiSmallMarginEnd boardroom-panel">
+            <Panel headerText="Project setup checklist">
+              <VBox class="sapUiSmallMargin">
+                <CheckBox text="Owner roles assigned" selected="true" enabled="false"/>
+                <CheckBox text="Legal entities validated" selected="true" enabled="false"/>
+                <CheckBox text="Target country and baseline confirmed" selected="true" enabled="false"/>
+                <CheckBox text="Pre-launch governance review cleared" selected="false"/>
+              </VBox>
+            </Panel>
+          </VBox>
+
+          <VBox width="35%" class="boardroom-panel">
+            <Panel headerText="Project summary">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The project context is stable and aligned to the current transformation baseline. Remaining work is concentrated on governance review and final operational readiness."/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
+
+        <Table items="{project>/legalEntities}" headerText="Legal entities" class="sapUiTinyMarginTop boardroom-panel">
           <columns>
             <Column><Text text="Entity ID"/></Column>
             <Column><Text text="Country"/></Column>

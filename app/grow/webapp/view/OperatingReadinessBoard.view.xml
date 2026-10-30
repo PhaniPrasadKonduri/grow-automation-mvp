@@ -4,27 +4,27 @@
   xmlns="sap.m"
   xmlns:layout="sap.ui.layout"
   displayBlock="true">
-  <Page id="operatingReadinessPage" title="Operating Readiness Board" showNavButton="true" navButtonPress=".onBack">
+  <Page id="operatingReadinessPage" title="Operating Readiness Board" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
         <Title text="Operational readiness and execution confidence" level="H1"/>
 
         <layout:ResponsiveFlowLayout class="sapUiMediumMarginTop">
-          <VBox class="sapUiSmallMarginEnd" width="30%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="30%">
             <GenericTile header="Deployment confidence" subheader="94%">
               <TileContent>
                 <NumericContent value="94" scale="%" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox class="sapUiSmallMarginEnd" width="30%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="30%">
             <GenericTile header="Support coverage" subheader="89%">
               <TileContent>
                 <NumericContent value="89" scale="%" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox width="30%">
+          <VBox width="30%" class="boardroom-kpi">
             <GenericTile header="Escalations" subheader="2 open">
               <TileContent>
                 <NumericContent value="2" valueColor="Critical"/>
@@ -34,7 +34,7 @@
         </layout:ResponsiveFlowLayout>
 
         <HBox width="100%" class="sapUiMediumMarginTop">
-          <VBox width="50%" class="sapUiSmallMarginEnd">
+          <VBox width="50%" class="sapUiSmallMarginEnd boardroom-panel">
             <Panel headerText="Readiness indicators">
               <List>
                 <StandardListItem title="Configuration validation" description="Complete and approved" info="Ready" infoState="Success"/>
@@ -44,11 +44,11 @@
             </Panel>
           </VBox>
 
-          <VBox width="50%">
+          <VBox width="50%" class="boardroom-panel">
             <Panel headerText="Operational narrative">
               <VBox class="sapUiSmallMargin">
                 <Text text="The operating model is ready for controlled scale-up. Deployment execution is supported by clear ownership, readiness gates, and recovery processes for isolated exceptions."/>
-                <Text class="sapUiTinyMarginTop" text="Leadership confidence is strongest when readiness, governance, and operational support all move in alignment with the transformation plan."/>
+                <Text class="sapUiTinyMarginTop" text="Leadership confidence is strongest when readiness, governance, and operational support move in alignment with the transformation plan."/>
               </VBox>
             </Panel>
           </VBox>

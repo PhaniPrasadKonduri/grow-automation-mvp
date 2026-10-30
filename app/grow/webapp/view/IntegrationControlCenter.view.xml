@@ -2,11 +2,10 @@
   controllerName="com.ey.grow.prototype.controller.IntegrationControlCenter"
   xmlns:mvc="sap.ui.core.mvc"
   xmlns="sap.m"
-  xmlns:core="sap.ui.core"
   displayBlock="true">
-  <Page id="integrationPage" title="Integration control center" showNavButton="true" navButtonPress=".onBack">
+  <Page id="integrationPage" title="Integration control center" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
         <ObjectHeader
           title="{project>/projectName}"
           number="{project>/projectId}"
@@ -21,26 +20,40 @@
           <Button text="Open SAP reference" press=".onOpenSapReference"/>
         </Toolbar>
 
-        <Table id="integrationTable" items="{integration>/items}" class="sapUiTinyMarginTop">
-          <columns>
-            <Column width="160px"><Text text="System"/></Column>
-            <Column width="180px"><Text text="Capability"/></Column>
-            <Column width="150px"><Text text="Observed"/></Column>
-            <Column width="160px"><Text text="Status"/></Column>
-            <Column><Text text="Correlation"/></Column>
-          </columns>
-          <items>
-            <ColumnListItem type="Navigation" press=".onSelectIntegration">
-              <cells>
-                <Text text="{integration>system}"/>
-                <Text text="{integration>capability}"/>
-                <Text text="{integration>observedAt}"/>
-                <ObjectStatus text="{integration>status}" state="{integration>state}"/>
-                <Text text="{integration>correlationId}"/>
-              </cells>
-            </ColumnListItem>
-          </items>
-        </Table>
+        <HBox width="100%" class="sapUiMediumMarginTop">
+          <VBox width="70%" class="sapUiSmallMarginEnd boardroom-panel">
+            <Panel headerText="Integration landscape">
+              <Table id="integrationTable" items="{integration>/items}" class="sapUiTinyMarginTop">
+                <columns>
+                  <Column width="160px"><Text text="System"/></Column>
+                  <Column width="180px"><Text text="Capability"/></Column>
+                  <Column width="150px"><Text text="Observed"/></Column>
+                  <Column width="160px"><Text text="Status"/></Column>
+                  <Column><Text text="Correlation"/></Column>
+                </columns>
+                <items>
+                  <ColumnListItem type="Navigation" press=".onSelectIntegration">
+                    <cells>
+                      <Text text="{integration>system}"/>
+                      <Text text="{integration>capability}"/>
+                      <Text text="{integration>observedAt}"/>
+                      <ObjectStatus text="{integration>status}" state="{integration>state}"/>
+                      <Text text="{integration>correlationId}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </Panel>
+          </VBox>
+
+          <VBox width="30%" class="boardroom-panel">
+            <Panel headerText="Operational note">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The current platform is healthy across the primary integration channels. One warning is being monitored for an upload path and one system remains offline, still tracked under clear ownership and recovery logic."/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
       </VBox>
     </content>
   </Page>

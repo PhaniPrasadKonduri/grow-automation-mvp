@@ -4,42 +4,56 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
   displayBlock="true">
-  <Page id="requirementsPage" title="Requirement and fit workbench" showNavButton="true" navButtonPress=".onBack">
+  <Page id="requirementsPage" title="Requirement fit workbench" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
         <ObjectHeader
           title="{project>/projectName}"
           number="{project>/projectId}"
-          intro="Review, filter and refine the requirement set and traceability before scoping the automation proposal."
+          intro="Assess readiness, evidence quality and business fit before the automation scope is finalised."
           backgroundDesign="Solid"/>
 
         <Toolbar class="sapUiTinyMarginTop">
-          <SearchField width="250px" liveChange=".onFilter" placeholder="Filter requirements or domain"/>
+          <SearchField width="270px" liveChange=".onFilter" placeholder="Filter requirements or domain"/>
           <ToolbarSpacer/>
           <Button text="Reset" press=".onReset"/>
           <Button text="Request scope proposal" type="Emphasized" press=".onRequestScopeProposal"/>
         </Toolbar>
 
-        <Table id="requirementsTable" items="{requirements>/items}" class="sapUiTinyMarginTop">
-          <columns>
-            <Column width="140px"><Text text="BR ID"/></Column>
-            <Column width="180px"><Text text="Domain"/></Column>
-            <Column width="180px"><Text text="Status"/></Column>
-            <Column width="220px"><Text text="Source"/></Column>
-            <Column><Text text="Fit"/></Column>
-          </columns>
-          <items>
-            <ColumnListItem type="Navigation" press=".onSelectRequirement">
-              <cells>
-                <Text text="{requirements>brId}"/>
-                <Text text="{requirements>domain}"/>
-                <ObjectStatus text="{requirements>status}" state="{requirements>state}"/>
-                <Text text="{requirements>source}"/>
-                <Text text="{requirements>fit}"/>
-              </cells>
-            </ColumnListItem>
-          </items>
-        </Table>
+        <HBox width="100%" class="sapUiMediumMarginTop">
+          <VBox width="60%" class="sapUiSmallMarginEnd boardroom-panel">
+            <Panel headerText="Requirement portfolio">
+              <Table id="requirementsTable" items="{requirements>/items}" class="sapUiTinyMarginTop boardroom-compact">
+                <columns>
+                  <Column width="140px"><Text text="BR ID"/></Column>
+                  <Column width="180px"><Text text="Domain"/></Column>
+                  <Column width="170px"><Text text="Status"/></Column>
+                  <Column width="220px"><Text text="Source"/></Column>
+                  <Column><Text text="Fit"/></Column>
+                </columns>
+                <items>
+                  <ColumnListItem type="Navigation" press=".onSelectRequirement">
+                    <cells>
+                      <Text text="{requirements>brId}"/>
+                      <Text text="{requirements>domain}"/>
+                      <ObjectStatus text="{requirements>status}" state="{requirements>state}"/>
+                      <Text text="{requirements>source}"/>
+                      <Text text="{requirements>fit}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </Panel>
+          </VBox>
+
+          <VBox width="40%" class="boardroom-panel">
+            <Panel headerText="Decision insight">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The requirement pool is healthy, with one evidence gap and one item still under manual review. The backlog is sufficiently mature to move into scoping with explicit governance and traceability."/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
       </VBox>
     </content>
   </Page>

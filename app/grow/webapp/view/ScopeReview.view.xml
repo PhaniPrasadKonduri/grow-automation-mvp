@@ -4,13 +4,13 @@
   xmlns="sap.m"
   xmlns:core="sap.ui.core"
   displayBlock="true">
-  <Page id="scopeReviewPage" title="Scoping agent review" showNavButton="true" navButtonPress=".onBack">
+  <Page id="scopeReviewPage" title="Scope review and baseline" showNavButton="true" navButtonPress=".onBack" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
         <ObjectHeader
           title="{project>/projectName}"
           number="{project>/projectId}"
-          intro="Review grounded scope candidates, exclusion risks and prerequisites before baselining the proposed scope."
+          intro="Review proposals, exclusion risk and prerequisite dependencies before confirming the core transformation scope."
           backgroundDesign="Solid"/>
 
         <Toolbar class="sapUiTinyMarginTop">
@@ -21,26 +21,40 @@
           <Button text="Submit scope baseline" type="Emphasized" press=".onSubmitScopeBaseline"/>
         </Toolbar>
 
-        <Table id="scopeTable" items="{scope>/items}" class="sapUiSmallMarginTop">
-          <columns>
-            <Column width="180px"><Text text="SAP ID"/></Column>
-            <Column width="180px"><Text text="Candidate"/></Column>
-            <Column width="150px"><Text text="Status"/></Column>
-            <Column width="140px"><Text text="Coverage"/></Column>
-            <Column><Text text="Prerequisites"/></Column>
-          </columns>
-          <items>
-            <ColumnListItem type="Navigation" press=".onSelectScopeRow">
-              <cells>
-                <Text text="{scope>sapId}"/>
-                <Text text="{scope>candidate}"/>
-                <ObjectStatus text="{scope>status}" state="{scope>state}"/>
-                <Text text="{scope>coverage}"/>
-                <Text text="{scope>prerequisites}"/>
-              </cells>
-            </ColumnListItem>
-          </items>
-        </Table>
+        <HBox width="100%" class="sapUiMediumMarginTop">
+          <VBox width="70%" class="sapUiSmallMarginEnd boardroom-panel">
+            <Panel headerText="Scope candidates">
+              <Table id="scopeTable" items="{scope>/items}" class="sapUiTinyMarginTop boardroom-compact">
+                <columns>
+                  <Column width="180px"><Text text="SAP ID"/></Column>
+                  <Column width="200px"><Text text="Candidate"/></Column>
+                  <Column width="150px"><Text text="Status"/></Column>
+                  <Column width="140px"><Text text="Coverage"/></Column>
+                  <Column><Text text="Prerequisites"/></Column>
+                </columns>
+                <items>
+                  <ColumnListItem type="Navigation" press=".onSelectScopeRow">
+                    <cells>
+                      <Text text="{scope>sapId}"/>
+                      <Text text="{scope>candidate}"/>
+                      <ObjectStatus text="{scope>status}" state="{scope>state}"/>
+                      <Text text="{scope>coverage}"/>
+                      <Text text="{scope>prerequisites}"/>
+                    </cells>
+                  </ColumnListItem>
+                </items>
+              </Table>
+            </Panel>
+          </VBox>
+
+          <VBox width="30%" class="boardroom-panel">
+            <Panel headerText="Governance note">
+              <VBox class="sapUiSmallMargin">
+                <Text text="The recommendation remains balanced across capability, feasibility and dependency risk. One candidate is still blocked by a clear prerequisite and requires explicit executive override to proceed."/>
+              </VBox>
+            </Panel>
+          </VBox>
+        </HBox>
       </VBox>
     </content>
   </Page>

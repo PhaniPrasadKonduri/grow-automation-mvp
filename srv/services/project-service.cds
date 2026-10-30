@@ -1,4 +1,4 @@
-using { grow } from '../db/schema';
+using { grow } from '../../db/schema';
 
 service ProjectService {
   entity Projects as projection on grow.Projects;

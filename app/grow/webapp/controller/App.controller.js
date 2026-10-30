@@ -40,6 +40,26 @@ sap.ui.define([
       }.bind(this));
     },
 
+    onHome: function () {
+      this.getOwnerComponent().getRouter().navTo("P01");
+    },
+
+    onPhaseOverview: function () {
+      this.getOwnerComponent().getRouter().navTo("ProjectPhaseOverview");
+    },
+
+    onValueBoard: function () {
+      this.getOwnerComponent().getRouter().navTo("ValueImpactDashboard");
+    },
+
+    onRiskBoard: function () {
+      this.getOwnerComponent().getRouter().navTo("RiskGovernanceBoard");
+    },
+
+    onReadinessBoard: function () {
+      this.getOwnerComponent().getRouter().navTo("OperatingReadinessBoard");
+    },
+
     onBack: function () {
       var oHistory = History.getInstance();
       var sPreviousHash = oHistory.getPreviousHash();

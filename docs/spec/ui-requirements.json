@@ -1,0 +1,243 @@
+{
+  "meta": {
+    "id": "UIR-001",
+    "version": "1.0.0",
+    "effectiveDate": "2026-10-30",
+    "title": "GROW Automation comprehensive MVP UI requirements",
+    "source": "GROW_MVP_UI_Requirements_for_Codex.md",
+    "provenance": "Documentation audit supplement to the original GROW UX and Codex prompt library.",
+    "scope": {
+      "routes": 28,
+      "actions": 130,
+      "globalRequirements": 52,
+      "sharedControlFamilies": 24,
+      "screenFieldContracts": 196
+    },
+    "status": "Active requirement baseline for productionization of the boardroom-ready GROW Automation app."
+  },
+  "globalRequirements": [
+    "UI-G01 preserve route and action inventory",
+    "UI-G02 represent mock evidence separately from production claims",
+    "UI-G03 use native SAP UI5/Fiori patterns",
+    "UI-G04 use Horizon light theme with semantic tokens",
+    "UI-G05 provide one primary action and clear secondary hierarchy",
+    "UI-G06 keep project/persona/environment context visible",
+    "UI-G07 use dynamic header, content sections and task-appropriate footer/actions",
+    "UI-G08 preserve list context when opening detail",
+    "UI-G09 support direct route, refresh and back navigation without blank pages",
+    "UI-G10 make all seven phase labels navigable",
+    "UI-G11 use responsive tables by default",
+    "UI-G12 support search, clear filters and no-results states",
+    "UI-G13 provide stable sort and critical columns",
+    "UI-G14 persist variant settings by user and context",
+    "UI-G15 separate row selection, navigation and action links",
+    "UI-G16 evaluate bulk actions per record",
+    "UI-G17 require typed validation and searchable value help",
+    "UI-G18 apply deterministic validation and boundary fixtures",
+    "UI-G19 distinguish observed, proposed and approved values",
+    "UI-G20 protect unsaved work with Save/Discard/Cancel",
+    "UI-G21 use field state plus message summary",
+    "UI-G22 show completion feedback only after state effect succeeds",
+    "UI-G23 support loading, empty, denied, stale and failed states",
+    "UI-G24 ensure every visible action has a meaningful outcome",
+    "UI-G25 replace unavailable actions with blocker/permission review",
+    "UI-G26 enforce persona/project authorization in backend checks",
+    "UI-G27 separate author, approver, release authority and auditor roles",
+    "UI-G28 show version, target, risk, evidence and owner before approval",
+    "UI-G29 verify prerequisites before dependent dispatch",
+    "UI-G30 distinguish queued, dispatched, failed, reconciling and verified outcomes",
+    "UI-G31 reconcile uncertain writes before retry",
+    "UI-G32 pause prevents new dispatch while preserving evidence",
+    "UI-G33 show bounded agent goal, plan, sources and validation",
+    "UI-G34 expose rationale and citations without fabricated hidden reasoning",
+    "UI-G35 provide assistant shell panel and phone full-screen conversation",
+    "UI-G36 support 12+ bounded assistant intents",
+    "UI-G37 limit conversation visibility to role/project scope",
+    "UI-G38 show all five SAP integration systems and state metadata",
+    "UI-G39 keep identifiers scoped and distinct by object type",
+    "UI-G40 use deterministic seeded synthetic records and a fixed demo clock",
+    "UI-G41 separate specification, fixtures and runtime state",
+    "UI-G42 show metric basis and numerator/denominator context",
+    "UI-G43 generate real scoped exports with simulation labels",
+    "UI-G44 validate 360, 768, 1024 and 1440 viewports",
+    "UI-G45 use progressive disclosure and one-column phone alternatives",
+    "UI-G46 provide accessible labels, focus and keyboard support",
+    "UI-G47 announce status and errors without color-only semantics",
+    "UI-G48 format locale/date/number values correctly",
+    "UI-G49 use short labels and helpful error text",
+    "UI-G50 trace each UI requirement to control, fixture, persona and test",
+    "UI-G51 debounce search and prevent duplicate submit",
+    "UI-G52 use Discover, Prepare, Explore, Realize Build, Realize Test, Deploy and Run labels"
+  ],
+  "sharedControls": [
+    "C01 Shell logo and home",
+    "C02 Navigation expansion and menu item",
+    "C03 Project selector",
+    "C04 Persona and permissions",
+    "C05 Global search",
+    "C06 Notifications",
+    "C07 Help",
+    "C08 Breadcrumb and browser back",
+    "C09 Filter variant and clear filters",
+    "C10 Sort group and column menu",
+    "C11 Table checkbox and row menu",
+    "C12 Value help and form inputs",
+    "C13 Tabs expanders and status links",
+    "C14 Dialog confirmation cancel close",
+    "C15 Message popover and retry",
+    "C16 Loading empty and no-results states",
+    "C17 Assistant shell entry and close",
+    "C18 Assistant send stop retry",
+    "C19 Assistant sources prompts and feedback",
+    "C20 Assistant new conversation and history",
+    "C21 Demo scenario selector and fault toggle",
+    "C22 Demo reset and guided step controls",
+    "C23 Chart data point and metric drilldown",
+    "C24 Export menu and download"
+  ],
+  "screenCoverage": {
+    "P00": {
+      "route": "/demo",
+      "title": "Demo entry and role context",
+      "persona": "All personas",
+      "focus": "Persona, project and scenario selection before guided journey"
+    },
+    "P01": {
+      "route": "/home",
+      "title": "Executive value cockpit",
+      "persona": "Sponsor and Delivery Lead",
+      "focus": "Boardroom-ready readiness, decisions and next work"
+    },
+    "P02": {
+      "route": "/projects/{id}",
+      "title": "Project and seven phase workspace",
+      "persona": "Delivery Lead and project members",
+      "focus": "Seven-phase gate overview and project health"
+    },
+    "P03": {
+      "route": "/projects/{id}/discover",
+      "title": "Discover and transformation context",
+      "focus": "Business outcomes and transformation context"
+    },
+    "P04": {
+      "route": "/projects/{id}/prepare",
+      "title": "Prepare and project setup",
+      "focus": "Project setup, legal entities and readiness"
+    },
+    "P05": {
+      "route": "/projects/{id}/integrations",
+      "title": "Integration control center",
+      "focus": "Five SAP system status and exchange health"
+    },
+    "P06": {
+      "route": "/projects/{id}/documents",
+      "title": "TO BE document intake",
+      "focus": "Document upload, extraction and requirement traceability"
+    },
+    "P07": {
+      "route": "/projects/{id}/requirements",
+      "title": "Requirement and fit workbench",
+      "focus": "Requirement review, traceability and scope proposal"
+    },
+    "P08": {
+      "route": "/projects/{id}/processes",
+      "title": "Process and architecture explorer",
+      "focus": "Process catalog and application map context"
+    },
+    "P09": {
+      "route": "/projects/{id}/scope",
+      "title": "Scoping agent review",
+      "focus": "Scope candidate assessment and baseline approval"
+    },
+    "P10": {
+      "route": "/projects/{id}/scope/{scopeId}",
+      "title": "Scope candidate detail",
+      "focus": "Candidate rationale, prerequisites and business fit"
+    },
+    "P11": {
+      "route": "/projects/{id}/organization",
+      "title": "Organization structure designer",
+      "focus": "Organization modeling and assignment review"
+    },
+    "P12": {
+      "route": "/projects/{id}/organization/{nodeId}",
+      "title": "Organization object detail",
+      "focus": "Attributes, assignments and structure impact"
+    },
+    "P13": {
+      "route": "/projects/{id}/configuration",
+      "title": "Configuration workspace",
+      "focus": "configuration activity set and validation"
+    },
+    "P14": {
+      "route": "/projects/{id}/configuration/{activityId}",
+      "title": "Configuration activity detail",
+      "focus": "Observed, proposed and approved values"
+    },
+    "P15": {
+      "route": "/projects/{id}/agents/{runId}",
+      "title": "Agent execution view",
+      "focus": "Bounded run, citations and safe follow-up"
+    },
+    "P16": {
+      "route": "/projects/{id}/approvals",
+      "title": "Approval workspace",
+      "focus": "Queue, state, ownership and blockers"
+    },
+    "P17": {
+      "route": "/projects/{id}/approvals/{approvalId}",
+      "title": "Approval detail",
+      "focus": "Approver decision and payload validation"
+    },
+    "P18": {
+      "route": "/projects/{id}/packages/{packageId}",
+      "title": "Deployment package and dry run",
+      "focus": "Package preparation and release authorization"
+    },
+    "P19": {
+      "route": "/projects/{id}/deployments/{runId}",
+      "title": "Deployment execution monitor",
+      "focus": "Execution trace and safe recovery"
+    },
+    "P20": {
+      "route": "/projects/{id}/reconciliation/{packageId}",
+      "title": "Readback and reconciliation",
+      "focus": "Observed-versus-approved outcome review"
+    },
+    "P21": {
+      "route": "/projects/{id}/exceptions",
+      "title": "Exceptions and recovery worklist",
+      "focus": "Failure ownership and recovery path"
+    },
+    "P22": {
+      "route": "/projects/{id}/quality",
+      "title": "Realize Test and qualification",
+      "focus": "Pilot-quality evidence and gate closure"
+    },
+    "P23": {
+      "route": "/projects/{id}/evidence",
+      "title": "Evidence and audit explorer",
+      "focus": "Decision lineage and export entitlement"
+    },
+    "P24": {
+      "route": "/projects/{id}/run",
+      "title": "Execution run overview",
+      "focus": "Current run plan and next allowed actions"
+    },
+    "P25": {
+      "route": "/projects/{id}/value",
+      "title": "Value and impact",
+      "focus": "Benefit assumptions and business value story"
+    },
+    "P26": {
+      "route": "/projects/{id}/access",
+      "title": "Access and entitlements",
+      "focus": "Role assignment and privilege visibility"
+    },
+    "P27": {
+      "route": "/projects/{id}/architecture",
+      "title": "Architecture and application map",
+      "focus": "System landscape and dependency map"
+    }
+  }
+}

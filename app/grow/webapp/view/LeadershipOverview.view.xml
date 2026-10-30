@@ -4,10 +4,10 @@
   xmlns="sap.m"
   xmlns:layout="sap.ui.layout"
   displayBlock="true">
-  <Page id="leadershipPage" title="Executive Transformation Overview" showNavButton="false">
+  <Page id="leadershipPage" title="Executive Transformation Overview" showNavButton="false" class="boardroom-page">
     <content>
-      <VBox class="sapUiSmallMargin" width="100%">
-        <Toolbar design="Transparent" class="sapUiTinyMarginBottom">
+      <VBox class="sapUiSmallMargin boardroom-shell" width="100%">
+        <Toolbar design="Transparent" class="boardroom-hero sapUiTinyMarginBottom">
           <Title text="GROW Automation Executive Overview" level="H1"/>
           <ToolbarSpacer/>
           <Button text="Value impact" press=".onValueImpact"/>
@@ -16,35 +16,35 @@
         </Toolbar>
 
         <layout:ResponsiveFlowLayout>
-          <VBox class="sapUiSmallMarginEnd" width="18%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="18%">
             <GenericTile header="Program health" subheader="82%" press=".onValueImpact">
               <TileContent>
                 <NumericContent value="82" valueColor="Good" scale="%"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox class="sapUiSmallMarginEnd" width="18%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="18%">
             <GenericTile header="Value realized" subheader="$4.2M" press=".onValueImpact">
               <TileContent>
                 <NumericContent value="4.2" scale="M" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox class="sapUiSmallMarginEnd" width="18%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="18%">
             <GenericTile header="Risk posture" subheader="Low-medium" press=".onRiskBoard">
               <TileContent>
                 <NumericContent value="12" scale="%" valueColor="Critical"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox class="sapUiSmallMarginEnd" width="18%">
+          <VBox class="sapUiSmallMarginEnd boardroom-kpi" width="18%">
             <GenericTile header="Deployment confidence" subheader="94%" press=".onOperatingReadiness">
               <TileContent>
                 <NumericContent value="94" scale="%" valueColor="Good"/>
               </TileContent>
             </GenericTile>
           </VBox>
-          <VBox width="18%">
+          <VBox width="18%" class="boardroom-kpi">
             <GenericTile header="Governance coverage" subheader="96%" press=".onRiskBoard">
               <TileContent>
                 <NumericContent value="96" scale="%" valueColor="Good"/>
@@ -54,7 +54,7 @@
         </layout:ResponsiveFlowLayout>
 
         <HBox width="100%" class="sapUiMediumMarginTop">
-          <VBox width="60%" class="sapUiSmallMarginEnd">
+          <VBox width="60%" class="sapUiSmallMarginEnd boardroom-panel">
             <Panel headerText="Transformation momentum" class="sapUiSmallMarginBottom">
               <VBox class="sapUiSmallMargin">
                 <HBox justifyContent="SpaceBetween" class="sapUiTinyMarginBottom">
@@ -76,7 +76,7 @@
             </Panel>
           </VBox>
 
-          <VBox width="40%">
+          <VBox width="40%" class="boardroom-panel">
             <Panel headerText="Leadership decisions required">
               <List>
                 <StandardListItem title="Approve control framework" description="Risk posture within policy guardrails"/>
@@ -87,7 +87,7 @@
           </VBox>
         </HBox>
 
-        <Panel headerText="Program narrative" class="sapUiMediumMarginTop">
+        <Panel headerText="Program narrative" class="sapUiMediumMarginTop boardroom-focus">
           <VBox class="sapUiSmallMargin">
             <Text text="The transformation program has moved beyond discovery and is now demonstrating measurable control, evidence-backed execution, and a disciplined governance model. Core change design is complete, with risk exposure reduced through policy controls, simulated deployment verification, and structured exception recovery."/>
             <Text class="sapUiTinyMarginTop" text="The current trajectory supports a controlled scale-up with executive confidence based on traceability, readiness, and controlled automation."/>
